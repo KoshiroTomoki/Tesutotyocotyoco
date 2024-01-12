@@ -1,0 +1,416 @@
+@use "doru";
+@use "breakpoint" as b;
+
+#information {
+    width: 100%;
+    height: 500vh;
+    background-color: #FCFAF2;
+}
+
+.infoGeneral {
+    width: 100%;
+    height: 30vh;
+    background-image: url("../images/infomation/topImageInfo.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & h1 {
+        font-size: 3rem;
+        font-weight: bold;
+
+        @include b.mq(tab) {
+            font-size: 2.5rem;
+        }
+
+        @include b.mq(mob) {
+            font-size: 2rem;
+        }
+
+
+    }
+}
+
+.infoComment {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20vh;
+    position: relative;
+
+    & p {
+        line-height: 1.7;
+        padding: 5rem;
+        width: 50%;
+
+        @include b.mq(tab) {
+            width: 240vw;
+        }
+
+        @include b.mq(mob) {
+            left: -20vw;
+        }
+    }
+
+    & p:nth-child(2) {
+        position: absolute;
+        top: 5vh;
+        left: 20vw;
+        width: 10%;
+
+        @include b.mq(tab) {
+            left: -10vw;
+        }
+
+        @include b.mq(mob) {
+            left: -15vw;
+            top: 50vw;
+        }
+    }
+
+    & p:nth-child(3) {
+        position: absolute;
+        top: -8vh;
+        left: 65vw;
+        width: 10%;
+
+        @include b.mq(tab) {
+            left: 67vw;
+        }
+
+        @include b.mq(mob) {
+            left: 44vw;
+        }
+    }
+}
+
+#infoKoeki {
+    width: 100%;
+    margin: 9vh auto;
+    position: relative;
+
+    & h1 {
+        text-align: center;
+        font-size: 3rem;
+        font-weight: bold;
+
+        @include b.mq(tab) {
+            font-size: 2.5rem;
+        }
+
+        @include b.mq(mob) {
+            font-size: 2rem;
+        }
+    }
+
+    .calender {
+        width: 16vw;
+        height: auto;
+        position: absolute;
+        top: 8vh;
+        left: 5vw;
+
+        & img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .friends {
+        width: 12vw;
+        height: auto;
+        position: absolute;
+        top: 140vh;
+        left: 80vw;
+
+        @include b.mq(tab) {
+            top: 240vh;
+        }
+
+        @include b.mq(mob) {
+            top: 220vh;
+            width: 20vw;
+            left: 74vw;
+        }
+
+        & img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+.infoKoekiCont {
+    margin: 0 auto;
+    width: 80vw;
+    height: 140vh;
+    background-color: white;
+    @include b.mq(tab) {
+        height: 220vh;
+    }
+
+    @include b.mq(mob) {
+        height: 200vh;
+    }
+
+    .infoKoekiCont01 {
+        display: flex;
+        justify-content: center;
+        gap: 3vw;
+
+        @include b.mq(tab) {
+            display: block;
+            
+        }
+
+        @include b.mq(mob) {
+            display: block;
+        }
+    }
+
+    .infoKoekiCont02 {
+        margin: 14vh auto 0;
+        width: 40%;
+
+        @include b.mq(tab) {
+            width: 80%;
+        }
+
+        @include b.mq(mob) {
+            width: 80%;
+        }
+
+        & img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    .infoKoekiCont03 {
+        margin: 14vh auto 0;
+        width: 40%;
+
+        @include b.mq(tab) {
+            width: 80%;
+        }
+
+        @include b.mq(mob) {
+            width: 80%;
+        }
+
+        & img {
+            width: 100%;
+            height: auto;
+        }
+    }
+}
+
+#infoAcade {
+    width: 100%;
+    margin: 20vh auto 10vh;
+    position: relative;
+
+    & h1 {
+        text-align: center;
+        font-size: 3rem;
+        font-weight: bold;
+
+        @include b.mq(tab) {
+            font-size: 2.5rem;
+        }
+
+        @include b.mq(mob) {
+            font-size: 2rem;
+        }
+    }
+
+    .deta_man {
+        width: 16vw;
+        height: auto;
+        position: absolute;
+        top: 8vh;
+        left: 5vw;
+
+        & img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .shorui {
+        width: 12vw;
+        height: auto;
+        position: absolute;
+        top: 410vh;
+        left: 80vw;
+
+
+        @include b.mq(mob) {
+            top: 340vh;
+        }
+
+        & img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+.infoAcadeCont {
+    margin: 0 auto;
+    width: 80vw;
+    height: 400vh;
+    background-color: white;
+
+    @include b.mq(tab) {
+        height: 400vh;
+    }
+
+    @include b.mq(mob) {
+        height: 330vh;
+    }
+    
+    .infoAcadeCont01 {
+        display: flex;
+        justify-content: center;
+
+        & h2 {
+            margin-top: 8vh;
+            font-size: 2rem;
+            padding: 1rem 5rem;
+            border-bottom-width: medium;
+            border-bottom-color: #E4C22B;
+
+            @include b.mq(tab) {
+                font-size: 1.5rem;
+            }
+
+            @include b.mq(mob) {
+                font-size: 1rem;
+            }
+        }
+    }
+
+    .infoAcadeCont02 {
+        display: flex;
+        justify-content: center;
+        gap: 4rem;
+        margin: 8vh auto;
+
+        @include b.mq(tab) {
+            display: block;
+        }
+
+        @include b.mq(mob) {
+            display: block;
+        }
+
+        & img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .infoAcadeCont03 {
+        margin: 0 auto;
+        width: 40%;
+
+        @include b.mq(tab) {
+            width: 80%;
+        }
+
+        @include b.mq(mob) {
+            width: 80%;
+        }
+
+        & img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .infoAcadeCont04 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        width: 40%;
+
+        @include b.mq(tab) {
+            width: 80%;
+            align-items: center;
+            margin: 2rem auto;
+        }
+
+        @include b.mq(mob) {
+            width: 80%;
+            align-items: center;
+        }
+
+        & p {
+            line-height: 1.7;
+            text-align: left;
+        }
+
+        & img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .infoKoekiCont01 {
+        margin: 4rem auto 0;
+        display: flex;
+        justify-content: center;
+        gap: 3vw;
+
+        @include b.mq(tab) {
+            display: block;
+        }
+
+        @include b.mq(mob) {
+            display: block;
+        }
+    }
+
+    .infoKoekiCont02 {
+        margin: 4vh auto;
+        width: 40%;
+
+        @include b.mq(tab) {
+            width: 80%;
+        }
+
+        @include b.mq(mob) {
+            width: 80%;
+        }
+
+        & img {
+            width: 100%;
+            height: 60%;
+        }
+    }
+
+    .infoKoekiCont03 {
+        margin: 4vh auto;
+        width: 40%;
+
+        @include b.mq(tab) {
+            width: 80%;
+        }
+
+        @include b.mq(mob) {
+            width: 80%;
+        }
+
+        & img {
+            width: 100%;
+            height: 60%;
+        }
+    }
+
+
+}

@@ -1,0 +1,203 @@
+@use "doru";
+@use "breakpoint" as b;
+
+main {
+    background-color: doru.$backgroundColor;
+    margin: 0 auto;
+    position: relative;
+    
+    .qaTitle{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: x-large;
+        font-weight: bold;
+        text-align: center;
+        background-image:url(../images/QandA/qaTop.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;;
+        height: 200px;
+    }
+    
+    .qaImg1 {
+        position: absolute;
+        top: 6%;
+        left: 75%;
+    }
+
+    .qaImg2{
+        position: absolute;
+        top: -2%;
+        left: 10%;
+    }
+    .qa_li {
+        background-color: #ffffff;
+        width: 80%;
+        border-radius: 1rem;
+        margin: 5rem auto;
+        padding: 3rem 2rem;
+    }
+
+    .qa_li dt{
+        padding:  1rem;
+    }
+    .qa_li dt::before {
+        content: "Q";
+        font-weight: bold;
+        font-size: x-large;
+        color: doru.$greenColor;
+        padding: 0.5rem;
+    }
+
+    .qa_li dd{
+        padding: 1rem;
+    }
+    .qa_li dd::before {
+        content: "A";
+        font-weight: bold;
+        font-size: x-large;
+        color: doru.$yellowColor;
+        padding: 0.5rem;
+    }
+
+    .Form {
+        position: relative;
+        padding-bottom: 5rem;
+        h2 {
+            font-size: x-large;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .contactTable {
+            width: 80%;
+            margin-bottom: 2rem;
+            margin: 2rem auto;
+            border-collapse: separate;
+            border-spacing: 1rem;
+        }
+        .contactItem,.contactBody {
+            padding:  0.5rem 1rem;
+            border-radius: 1rem;
+        }
+
+        .contactItem {
+            width: 40%;
+            min-width: 170px;
+            text-align: center;
+            background-color: #ffffff;
+            border: 1px solid #ccc;
+            border-radius: 0 16px 16px 0;
+            border-left: 10px solid doru.$greenColor;
+        }
+
+        #contactName{
+            width:29%;
+            input{
+                width: 80%;
+            }
+        }
+
+        #contactItemYellow{
+            border-left: 10px solid doru.$yellowColor;
+        }
+
+        .contactBody {
+            background-color: #ffffff;
+            input {
+                width: 100%;
+                background-color: #ffffff;
+                border: 1px solid #ccc;
+                border-radius: 16px;
+                padding: 0.5rem 2rem;
+                margin: 0.5rem;
+            }
+
+            .contactSubmit{
+                text-align: center;
+            }
+
+            textarea {
+                background-color: #ffffff;
+                width: 100%;
+                height: 15rem;
+            }
+
+            .formSelect {
+                width: 100%;
+                padding: 5px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+            }
+        }
+
+        .labelItem{
+            display: inline-block;
+            color: #ffffff;
+            background-color: #ff7171;
+            padding: 0 0.5rem;
+            border-radius: 100vh;
+        }
+
+        .contactSubmit {
+            width: 250px;
+            /* 横幅指定 */
+            background-color: doru.$yellowColor;
+            /* 背景色 */
+            color: #fff;
+            /* 文字色 */
+            font-weight: bold;
+            /* 文字の太さ */
+            display: block;
+            /* インライン要素をブロック要素に変更 */
+            margin: 0 auto;
+            /* 中央寄せ */
+            font-size: 16px;
+            /* 文字の大きさ */
+            padding: 15px;
+            /* 内側の余白 */
+            border-radius: 100vh;
+            /* 角丸指定 */
+            border: none;
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            cursor: pointer;
+        }
+        @include b.mq(tab) {
+            .contactTable {
+                margin: 2rem auto;
+            }
+            tr{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            .contactItem{
+                width: 100%;
+            }
+            .contactBody{
+                width: 100%;
+                border-radius: 0;
+                
+            }
+            #contactName{
+                width: 49%;
+                input{
+                    display: block;
+                    width: 100%;
+                }
+            }
+            
+        }
+        @include b.mq(mob) {
+            .qaImg1 img{
+                width: 80px;
+            }
+             #contactName{
+                width: 100%;
+             }
+        }
+    }
+}
