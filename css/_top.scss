@@ -1,15 +1,6 @@
 @use "doru";
 @use "breakpoint" as b;
 
-header {
-    height: 8rem;
-    background-color: white;
-
-    @include b.mq(tab) {
-        height: 5rem;
-    }
-}
-
 /////////////////////  topSectionTop
 #topSectionTop {
     position: relative;
@@ -17,7 +8,12 @@ header {
     background-position: center top;
     background-repeat: no-repeat;
     max-width: doru.$maxWidth;
-    margin: 0 auto;
+
+    margin: 8rem auto 0;
+
+    @include b.mq(tab) {
+    margin: 5rem auto 0;
+    }
 
     .main-top {
         grid-row: main;
@@ -25,8 +21,9 @@ header {
         max-width: doru.$maxWidth;
 
         @include b.mq(tab) {
-            height: 50vh; 
+            height: 50vh;
         }
+
         @include b.mq(mob) {
             height: 40vh;
         }
@@ -213,6 +210,15 @@ header {
         left: 50%;
         transform: translate(-50%, -50%);
 
+        animation: fontcolor 10s infinite;
+
+        @keyframes fontcolor {
+            0% { color: #B5B5B5; }
+            25% { color: doru.$fontColor; }
+            50% { color: #B5B5B5; }
+            75% { color: doru.$fontColor; }
+            100% { color: #B5B5B5; }
+        }
 
         a:hover {
             color: white;
@@ -248,8 +254,16 @@ header {
     }
 
     .faceBook {
-        max-width: 500px;
+        width: 500px;
         height: 200px;
+
+        @include b.mq(tab) {
+            width: 300px;
+        }
+
+        @include b.mq(mob) {
+            width: 300px;
+        }
 
         iframe {
             width: 100%;
@@ -259,7 +273,7 @@ header {
     .bird01 {
         position: absolute;
         top: -40%;
-        left: 20%;
+        left: 10%;
         max-width: 100px;
         height: auto;
 
@@ -277,7 +291,7 @@ header {
     .bird02 {
         position: absolute;
         top: 75%;
-        right: 20%;
+        right: 10%;
         max-width: 100px;
         height: auto;
 
@@ -296,17 +310,19 @@ header {
 
 #topSectionAbout {
     background-color: white;
-    width: 500px;
+    max-width: 1000px;
     height: 500px;
-    border-radius: 50%;
-    max-width: doru.$maxWidth;
+    border-radius: 1rem;
     margin: 5rem auto;
 
     display: flex;
     justify-content: center;
     align-items: center;
 
+    position: relative;
+
     @include b.mq(tab) {
+        border-radius: 50%;
         width: 400px;
         height: 400px;
     }
@@ -368,6 +384,48 @@ header {
 
         .linkYellow:hover {
             box-shadow: none;
+        }
+    }
+
+    .topAboutImg02{
+        position: absolute;
+        top: 20%;
+        left: 10%;
+        max-width: 150px;
+
+        @include b.mq(tab) {
+        display: none;
+            top: 0%;
+            left: -10%;
+        }
+
+        @include b.mq(mob) {
+            max-width: 80px;
+
+        }
+
+        img{
+            width: 100%;
+        }
+    }
+
+    .topAboutImg{
+        position: absolute;
+        top: 50%;
+        right: 10%;
+
+        @include b.mq(tab) {
+            top: 50%;
+            right: -10%;
+        }
+
+        @include b.mq(mob) {
+            max-width: 100px;
+
+        }
+
+        img{
+            width: 100%;
         }
     }
 }
@@ -458,6 +516,12 @@ header {
         h2 {
             margin: 2rem;
             font-weight: bold;
+
+            @include b.mq(tab) {
+                margin: 0;
+                margin-top: 7rem;
+                margin-bottom: 0rem;
+            }
         }
 
         .activityText {
@@ -498,7 +562,7 @@ header {
 /////////////////////  topSectionGoods
 
 #topSectionGoods {
-    margin-top: 5rem;
+    margin-top: 10rem;
     padding: 3rem;
     background-color: white;
     border-radius: 1rem;
@@ -550,6 +614,10 @@ header {
 
         .goodsBox01 {
             margin: 1rem;
+
+            .goodsText {
+                padding-bottom: 1rem;
+            }
 
             img {
                 width: 100%;
@@ -739,3 +807,5 @@ svg {
         }
     }
 }
+
+

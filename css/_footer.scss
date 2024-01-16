@@ -144,7 +144,7 @@ footer {
 
                 @include b.mq(tab) {
                     width: 20%;
-                    font-size: 1rem;
+                    font-size: 14px;
                     line-height: 1.8rem;
                     height: 300px;
                     padding: 3rem 0 0 2%;
@@ -156,7 +156,7 @@ footer {
                     display: none;
                 }
 
-                a:hover{
+                a:hover {
                     transition: 0.5s;
                     color: doru.$fontColor;
                 }
@@ -175,7 +175,7 @@ footer {
                 font-size: 1rem;
 
                 @include b.mq(tab) {
-                    font-size: 15px;
+                    font-size: 14px;
                     line-height: 1.6rem;
                     width: 25%;
                     min-width: 100px;
@@ -210,7 +210,7 @@ footer {
                     }
                 }
 
-                a:hover{
+                a:hover {
                     transition: 0.5s;
                     color: doru.$fontColor;
                 }
@@ -236,12 +236,12 @@ footer {
                 }
 
                 .pageTop {
-                    width: 140px;
+                    max-width: 140px;
                     height: auto;
+
 
                     & img {
                         width: 100%;
-
                     }
 
                     @include b.mq(tab) {
@@ -250,6 +250,10 @@ footer {
 
                     @include b.mq(mob) {
                         width: 80px;
+                        position: fixed;
+                        top: 90%;
+                        right: 2%;
+                        z-index: 10;
                     }
                 }
 
@@ -257,7 +261,7 @@ footer {
                     display: flex;
                     justify-content: center;
                     gap: 30px;
-                    padding-top: 80px;
+                    padding-top: 7rem;
                     width: 200px;
                     height: auto;
 
@@ -293,7 +297,9 @@ footer {
                 }
             }
         }
+
         //  footer00     //
     }
+
     //  footerWrap   //
 }

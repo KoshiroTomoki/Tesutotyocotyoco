@@ -1,6 +1,8 @@
 @use "doru";
 @use "breakpoint" as b;
 
+// テスト
+
 button {
     color: #ffffff;
 }
@@ -118,6 +120,13 @@ button {
                 font-size: 3rem;
                 margin-right: 1rem;
                 color: doru.$greenColor;
+                @include b.mq(tab) {
+                    font-size: 3rem;
+                }
+    
+                @include b.mq(mob) {
+                    font-size: 2rem;
+                }
             }
 
             p {
@@ -151,14 +160,25 @@ button {
                 font-weight: bold;
                 margin-bottom: 3rem;
 
+                @include b.mq(tab) {
+                    font-size: 1.5rem;
+                }
                 @include b.mq(mob) {
                     margin-bottom: 2rem;
+                    font-size: 1.2rem;
                 }
 
                 span {
                     font-size: 3rem;
                     color: doru.$yellowColor;
                     margin-right: 1rem;
+                    @include b.mq(tab) {
+                        font-size: 3rem;
+                    }
+        
+                    @include b.mq(mob) {
+                        font-size: 2rem;
+                    }
                 }
             }
         }
@@ -209,6 +229,12 @@ button {
         font-size: 7rem;
         color: doru.$yellowColor;
         text-align: center;
+        @include b.mq(tab) {
+            font-size: 5rem;
+        }
+        @include b.mq(mob) {
+            font-size: 3rem;
+        }
     }
 
     .topMeritBox03 {
@@ -222,6 +248,13 @@ button {
             h2 {
                 font-size: 2rem;
                 font-weight: bold;
+                
+                @include b.mq(tab) {
+                    font-size: 1.5rem;
+                }
+                @include b.mq(mob) {
+                    font-size: 1.2rem;
+                }
             }
 
             p {
@@ -257,9 +290,10 @@ button {
         border: solid 8px doru.$yellowColor;
         border-radius: 10rem;
         font-size: 1.5rem;
-        width: 19rem;
+        width: 20rem;
         text-align: center;
         padding: 0.5rem;
+        box-shadow: 0.2rem 0.2rem 0.2rem rgb(168, 168, 168);
         transition: 0.5s;
 
         @include b.mq(tab) {
@@ -269,11 +303,13 @@ button {
             border: solid 5px doru.$yellowColor;
         }
     }
+
+    .linkYellow:hover {
+        box-shadow: none;
+    }
 }
 
-.linkYellow:hover {
-    box-shadow: none;
-}
+
 
 // member
 
@@ -353,6 +389,13 @@ button {
 
         h2 {
             font-weight: bold;
+            @include b.mq(tab) {
+                font-size: 1.5rem;
+            }
+
+            @include b.mq(mob) {
+                font-size: 1.2rem;
+            }
         }
 
         .meritBox0201 {
@@ -360,6 +403,13 @@ button {
                 font-size: 3rem;
                 color: doru.$yellowColor;
                 margin-right: 1rem;
+                @include b.mq(tab) {
+                    font-size: 3rem;
+                }
+    
+                @include b.mq(mob) {
+                    font-size: 2rem;
+                }
             }
         }
 
@@ -419,6 +469,13 @@ button {
             h2 {
                 font-size: 2rem;
                 font-weight: bold;
+                @include b.mq(tab) {
+                    font-size: 1.5rem;
+                }
+
+                @include b.mq(mob) {
+                    font-size: 1.2rem;
+                }
             }
 
             p {
@@ -451,5 +508,11 @@ button {
         font-size: 7rem;
         color: doru.$greenColor;
         text-align: center;
+        @include b.mq(tab) {
+            font-size: 5rem;
+        }
+        @include b.mq(mob) {
+            font-size: 3rem;
+        }
     }
 }

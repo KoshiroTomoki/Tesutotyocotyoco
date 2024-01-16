@@ -1,130 +1,145 @@
 @use "doru";
 @use "breakpoint" as b;
 
-.headerWrap {
-    height: 5rem;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 1, 5rem;
-    border-bottom: 2px solid doru.$yellowColor;
-
-    .headerNav01 {
-
-        ul {
-            display: flex;
-            gap: 1rem;
-            align-items: center;
-
-            @include b.mq(tab) {
-                gap: 0.5rem;
-            }
-
-            img {
-                width: 60px;
-                margin-left: 1rem;
-
-                @include b.mq(tab) {
-                    width: 45px;
-                }
-            }
-
-            h1 {
-                font-size: 2rem;
-                font-weight: bold;
-
-                @include b.mq(tab) {
-                    font-size: 1.5rem;
-                }
-
-                @include b.mq(mob) {
-                    font-size: 1.25rem;
-                }
-            }
-        }
-    }
-
-    .headerNav02 {
-        margin-right: 3rem;
-
-        ul {
-            display: flex;
-            gap: 2rem;
-            align-items: center;
-
-            img {
-                @include b.mq(mob) {
-                    width: 20px;
-                }
-            }
-
-            .headerP {
-                @include b.mq(tab) {
-                    display: none;
-                }
-            }
-
-        }
-    }
-}
-
-.menuWrap {
-    height: 3rem;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+header {
+    height: 8rem;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    z-index: 100;
     width: 100%;
-    background-color: #E4C22B;
 
     @include b.mq(tab) {
-        display: none;
+        height: 5rem;
     }
 
-    nav {
+    .headerWrap {
+        height: 5rem;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1, 5rem;
+        border-bottom: 2px solid doru.$yellowColor;
+
+
+        .headerNav01 {
+
+            ul {
+                display: flex;
+                gap: 1rem;
+                align-items: center;
+
+                @include b.mq(tab) {
+                    gap: 0.5rem;
+                }
+
+                img {
+                    width: 60px;
+                    margin-left: 1rem;
+
+                    @include b.mq(tab) {
+                        width: 45px;
+                    }
+                }
+
+                h1 {
+                    font-size: 2rem;
+                    font-weight: bold;
+
+                    @include b.mq(tab) {
+                        font-size: 1.5rem;
+                    }
+
+                    @include b.mq(mob) {
+                        font-size: 1.25rem;
+                    }
+                }
+            }
+        }
+
+        .headerNav02 {
+            margin-right: 3rem;
+
+            ul {
+                display: flex;
+                gap: 2rem;
+                align-items: center;
+
+                img {
+                    @include b.mq(mob) {
+                        width: 20px;
+                    }
+                }
+
+                .headerP {
+                    @include b.mq(tab) {
+                        display: none;
+                    }
+                }
+
+            }
+        }
+    }
+
+    .menuWrap {
+        height: 3rem;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
         width: 100%;
-        padding: 0 3rem;
+        background-color: #E4C22B;
+        border-bottom: white 2px solid;
 
-        ul {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
+        @include b.mq(tab) {
+            display: none;
         }
 
-        li {
-            color: white;
-            transition: 0.5s;
-        }
-
-        a {
-            position: relative;
-            display: inline-block;
-            transition: .3s;
-        }
-
-        a:hover {
-            color: doru.$fontColor;
-            transition: 0.5s;
-        }
-
-        a::after {
-            position: absolute;
-            bottom: .3em;
-            left: 0;
-            content: '';
+        nav {
             width: 100%;
-            height: 1px;
-            background-color: #382710;
-            opacity: 0;
-            transition: .3s;
-        }
+            padding: 0 3rem;
 
-        a:hover::after {
-            bottom: 0;
-            color: doru.$fontColor;
-            transition: 0.4s;
-            opacity: 1;
+            ul {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+            }
+
+            li {
+                color: white;
+                transition: 0.5s;
+            }
+
+            a {
+                position: relative;
+                display: inline-block;
+                transition: .3s;
+            }
+
+            a:hover {
+                color: doru.$fontColor;
+                transition: 0.5s;
+            }
+
+            a::after {
+                position: absolute;
+                bottom: .3em;
+                left: 0;
+                content: '';
+                width: 100%;
+                height: 1px;
+                background-color: #382710;
+                opacity: 0;
+                transition: .3s;
+            }
+
+            a:hover::after {
+                bottom: 0;
+                color: doru.$fontColor;
+                transition: 0.4s;
+                opacity: 1;
+            }
         }
     }
 }

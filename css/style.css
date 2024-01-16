@@ -382,7 +382,20 @@ th {
   font-weight: bold;
 }
 
-.headerWrap {
+header {
+  height: 8rem;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+}
+@media screen and (max-width: 768px) {
+  header {
+    height: 5rem;
+  }
+}
+header .headerWrap {
   height: 5rem;
   margin: 0 auto;
   display: flex;
@@ -391,59 +404,58 @@ th {
   gap: 1, 5rem;
   border-bottom: 2px solid #E4C22B;
 }
-.headerWrap .headerNav01 ul {
+header .headerWrap .headerNav01 ul {
   display: flex;
   gap: 1rem;
   align-items: center;
 }
 @media screen and (max-width: 768px) {
-  .headerWrap .headerNav01 ul {
+  header .headerWrap .headerNav01 ul {
     gap: 0.5rem;
   }
 }
-.headerWrap .headerNav01 ul img {
+header .headerWrap .headerNav01 ul img {
   width: 60px;
   margin-left: 1rem;
 }
 @media screen and (max-width: 768px) {
-  .headerWrap .headerNav01 ul img {
+  header .headerWrap .headerNav01 ul img {
     width: 45px;
   }
 }
-.headerWrap .headerNav01 ul h1 {
+header .headerWrap .headerNav01 ul h1 {
   font-size: 2rem;
   font-weight: bold;
 }
 @media screen and (max-width: 768px) {
-  .headerWrap .headerNav01 ul h1 {
+  header .headerWrap .headerNav01 ul h1 {
     font-size: 1.5rem;
   }
 }
 @media screen and (max-width: 500px) {
-  .headerWrap .headerNav01 ul h1 {
+  header .headerWrap .headerNav01 ul h1 {
     font-size: 1.25rem;
   }
 }
-.headerWrap .headerNav02 {
+header .headerWrap .headerNav02 {
   margin-right: 3rem;
 }
-.headerWrap .headerNav02 ul {
+header .headerWrap .headerNav02 ul {
   display: flex;
   gap: 2rem;
   align-items: center;
 }
 @media screen and (max-width: 500px) {
-  .headerWrap .headerNav02 ul img {
+  header .headerWrap .headerNav02 ul img {
     width: 20px;
   }
 }
 @media screen and (max-width: 768px) {
-  .headerWrap .headerNav02 ul .headerP {
+  header .headerWrap .headerNav02 ul .headerP {
     display: none;
   }
 }
-
-.menuWrap {
+header .menuWrap {
   height: 3rem;
   margin: 0 auto;
   display: flex;
@@ -451,35 +463,36 @@ th {
   align-items: center;
   width: 100%;
   background-color: #E4C22B;
+  border-bottom: white 2px solid;
 }
 @media screen and (max-width: 768px) {
-  .menuWrap {
+  header .menuWrap {
     display: none;
   }
 }
-.menuWrap nav {
+header .menuWrap nav {
   width: 100%;
   padding: 0 3rem;
 }
-.menuWrap nav ul {
+header .menuWrap nav ul {
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
-.menuWrap nav li {
+header .menuWrap nav li {
   color: white;
   transition: 0.5s;
 }
-.menuWrap nav a {
+header .menuWrap nav a {
   position: relative;
   display: inline-block;
   transition: 0.3s;
 }
-.menuWrap nav a:hover {
+header .menuWrap nav a:hover {
   color: #382710;
   transition: 0.5s;
 }
-.menuWrap nav a::after {
+header .menuWrap nav a::after {
   position: absolute;
   bottom: 0.3em;
   left: 0;
@@ -490,7 +503,7 @@ th {
   opacity: 0;
   transition: 0.3s;
 }
-.menuWrap nav a:hover::after {
+header .menuWrap nav a:hover::after {
   bottom: 0;
   color: #382710;
   transition: 0.4s;
@@ -516,8 +529,8 @@ th {
   text-align: center;
 }
 #drawerMenu ul .drowerLi {
-  background-color: #FFFFFF;
-  border: 1px solid #B5B5B5;
+  color: white;
+  background-color: #E4C22B;
   border-radius: 1rem;
   margin-top: 2.5rem;
   padding-top: 0.75rem;
@@ -597,8 +610,10 @@ th {
   #drawerMenu {
     position: fixed;
     top: 0;
-    right: -240px;
+    right: -100%;
     transition: all 0.3s linear;
+    width: 100%;
+    max-width: 200px;
   }
   #drawerMenu.open {
     right: 0;
@@ -606,13 +621,8 @@ th {
   }
   #drawerMenu ul {
     display: block;
-    width: 200px;
-    height: 450px;
-    padding: 80px 20px 20px 20px;
-    background-color: #FFFFFF;
-    border-top: 2px solid #E4C22B;
-    border-left: 2px solid #E4C22B;
-    border-bottom: 2px solid #E4C22B;
+    padding: 20px 20px 20px 20px;
+    background-color: #E4C22B;
     overflow: hidden;
     text-align: center;
     list-style-type: none;
@@ -621,6 +631,7 @@ th {
     top: 78px;
   }
   #drawerMenu li {
+    color: white;
     width: 100%;
   }
   #drawerMenu a {
@@ -632,7 +643,7 @@ th {
     color: #382710;
     transition: 0.5s;
   }
-  a::after {
+  #drawerMenu a::after {
     position: absolute;
     bottom: 0.3em;
     left: 0;
@@ -643,30 +654,25 @@ th {
     opacity: 0;
     transition: 0.3s;
   }
-  a:hover::after {
+  #drawerMenu a:hover::after {
     bottom: 0;
     color: #382710;
     transition: 0.4s;
     opacity: 1;
   }
 }
-header {
-  height: 8rem;
-  background-color: white;
-}
-@media screen and (max-width: 768px) {
-  header {
-    height: 5rem;
-  }
-}
-
 #topSectionTop {
   position: relative;
   height: auto;
   background-position: center top;
   background-repeat: no-repeat;
   max-width: 1280px;
-  margin: 0 auto;
+  margin: 8rem auto 0;
+}
+@media screen and (max-width: 768px) {
+  #topSectionTop {
+    margin: 5rem auto 0;
+  }
 }
 #topSectionTop .main-top {
   grid-row: main;
@@ -849,6 +855,24 @@ header {
   top: 93%;
   left: 50%;
   transform: translate(-50%, -50%);
+  animation: fontcolor 10s infinite;
+}
+@keyframes fontcolor {
+  0% {
+    color: #B5B5B5;
+  }
+  25% {
+    color: #382710;
+  }
+  50% {
+    color: #B5B5B5;
+  }
+  75% {
+    color: #382710;
+  }
+  100% {
+    color: #B5B5B5;
+  }
 }
 #topSectionTop .topScroll a:hover {
   color: white;
@@ -881,8 +905,18 @@ header {
   }
 }
 #topSectionFb .faceBook {
-  max-width: 500px;
+  width: 500px;
   height: 200px;
+}
+@media screen and (max-width: 768px) {
+  #topSectionFb .faceBook {
+    width: 300px;
+  }
+}
+@media screen and (max-width: 500px) {
+  #topSectionFb .faceBook {
+    width: 300px;
+  }
 }
 #topSectionFb .faceBook iframe {
   width: 100%;
@@ -890,7 +924,7 @@ header {
 #topSectionFb .bird01 {
   position: absolute;
   top: -40%;
-  left: 20%;
+  left: 10%;
   max-width: 100px;
   height: auto;
 }
@@ -906,7 +940,7 @@ header {
 #topSectionFb .bird02 {
   position: absolute;
   top: 75%;
-  right: 20%;
+  right: 10%;
   max-width: 100px;
   height: auto;
 }
@@ -922,17 +956,18 @@ header {
 
 #topSectionAbout {
   background-color: white;
-  width: 500px;
+  max-width: 1000px;
   height: 500px;
-  border-radius: 50%;
-  max-width: 1280px;
+  border-radius: 1rem;
   margin: 5rem auto;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 @media screen and (max-width: 768px) {
   #topSectionAbout {
+    border-radius: 50%;
     width: 400px;
     height: 400px;
   }
@@ -996,6 +1031,46 @@ header {
 }
 #topSectionAbout .topAboutBox .linkYellow:hover {
   box-shadow: none;
+}
+#topSectionAbout .topAboutImg02 {
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  max-width: 150px;
+}
+@media screen and (max-width: 768px) {
+  #topSectionAbout .topAboutImg02 {
+    display: none;
+    top: 0%;
+    left: -10%;
+  }
+}
+@media screen and (max-width: 500px) {
+  #topSectionAbout .topAboutImg02 {
+    max-width: 80px;
+  }
+}
+#topSectionAbout .topAboutImg02 img {
+  width: 100%;
+}
+#topSectionAbout .topAboutImg {
+  position: absolute;
+  top: 50%;
+  right: 10%;
+}
+@media screen and (max-width: 768px) {
+  #topSectionAbout .topAboutImg {
+    top: 50%;
+    right: -10%;
+  }
+}
+@media screen and (max-width: 500px) {
+  #topSectionAbout .topAboutImg {
+    max-width: 100px;
+  }
+}
+#topSectionAbout .topAboutImg img {
+  width: 100%;
 }
 
 #topSectionActivity {
@@ -1077,6 +1152,13 @@ header {
   margin: 2rem;
   font-weight: bold;
 }
+@media screen and (max-width: 768px) {
+  #topSectionActivity .activity02 h2 {
+    margin: 0;
+    margin-top: 7rem;
+    margin-bottom: 0rem;
+  }
+}
 #topSectionActivity .activity02 .activityText {
   margin: 0 auto;
   padding: 1rem 3rem;
@@ -1111,7 +1193,7 @@ header {
 }
 
 #topSectionGoods {
-  margin-top: 5rem;
+  margin-top: 10rem;
   padding: 3rem;
   background-color: white;
   border-radius: 1rem;
@@ -1165,6 +1247,9 @@ header {
 }
 #topSectionGoods .topGoodsBox02 .goodsBox01 {
   margin: 1rem;
+}
+#topSectionGoods .topGoodsBox02 .goodsBox01 .goodsText {
+  padding-bottom: 1rem;
 }
 #topSectionGoods .topGoodsBox02 .goodsBox01 img {
   width: 100%;
@@ -1337,7 +1422,12 @@ svg .svgMap .svgMap2 .mapNoActive .wakayamaName {
 }
 
 #aboutTop {
-  margin: 0 -0.5rem 7rem;
+  margin: 8rem -0.5rem 7rem;
+}
+@media screen and (max-width: 768px) {
+  #aboutTop {
+    margin: 5rem -0.5rem 7rem;
+  }
 }
 #aboutTop .aboutTop {
   width: 100%;
@@ -1606,6 +1696,16 @@ button {
   margin-right: 1rem;
   color: #2E6256;
 }
+@media screen and (max-width: 768px) {
+  #meritMemberBox .topMeritBox01 .meritBox0102 span {
+    font-size: 3rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  #meritMemberBox .topMeritBox01 .meritBox0102 span {
+    font-size: 2rem;
+  }
+}
 #meritMemberBox .topMeritBox01 .meritBox0102 p {
   padding-bottom: 1rem;
 }
@@ -1632,15 +1732,31 @@ button {
   font-weight: bold;
   margin-bottom: 3rem;
 }
+@media screen and (max-width: 768px) {
+  #meritMemberBox .topMeritBox02 .meritBox0201 h2 {
+    font-size: 1.5rem;
+  }
+}
 @media screen and (max-width: 500px) {
   #meritMemberBox .topMeritBox02 .meritBox0201 h2 {
     margin-bottom: 2rem;
+    font-size: 1.2rem;
   }
 }
 #meritMemberBox .topMeritBox02 .meritBox0201 h2 span {
   font-size: 3rem;
   color: #E4C22B;
   margin-right: 1rem;
+}
+@media screen and (max-width: 768px) {
+  #meritMemberBox .topMeritBox02 .meritBox0201 h2 span {
+    font-size: 3rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  #meritMemberBox .topMeritBox02 .meritBox0201 h2 span {
+    font-size: 2rem;
+  }
 }
 #meritMemberBox .topMeritBox02 .meritBox0202 {
   position: absolute;
@@ -1684,6 +1800,16 @@ button {
   color: #E4C22B;
   text-align: center;
 }
+@media screen and (max-width: 768px) {
+  #meritMemberBox .meritArrow {
+    font-size: 5rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  #meritMemberBox .meritArrow {
+    font-size: 3rem;
+  }
+}
 #meritMemberBox .topMeritBox03 {
   justify-content: center;
   align-items: center;
@@ -1695,6 +1821,16 @@ button {
 #meritMemberBox .topMeritBox03 .topMeritBox03Text h2 {
   font-size: 2rem;
   font-weight: bold;
+}
+@media screen and (max-width: 768px) {
+  #meritMemberBox .topMeritBox03 .topMeritBox03Text h2 {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  #meritMemberBox .topMeritBox03 .topMeritBox03Text h2 {
+    font-size: 1.2rem;
+  }
 }
 #meritMemberBox .topMeritBox03 .topMeritBox03Text p {
   margin: 2rem;
@@ -1724,9 +1860,10 @@ button {
   border: solid 8px #E4C22B;
   border-radius: 10rem;
   font-size: 1.5rem;
-  width: 19rem;
+  width: 20rem;
   text-align: center;
   padding: 0.5rem;
+  box-shadow: 0.2rem 0.2rem 0.2rem rgb(168, 168, 168);
   transition: 0.5s;
 }
 @media screen and (max-width: 768px) {
@@ -1737,8 +1874,7 @@ button {
     border: solid 5px #E4C22B;
   }
 }
-
-.linkYellow:hover {
+#meritMemberBox .linkYellow:hover {
   box-shadow: none;
 }
 
@@ -1817,10 +1953,30 @@ button {
 #meritGeneralBox .topMeritBox02 h2 {
   font-weight: bold;
 }
+@media screen and (max-width: 768px) {
+  #meritGeneralBox .topMeritBox02 h2 {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  #meritGeneralBox .topMeritBox02 h2 {
+    font-size: 1.2rem;
+  }
+}
 #meritGeneralBox .topMeritBox02 .meritBox0201 span {
   font-size: 3rem;
   color: #E4C22B;
   margin-right: 1rem;
+}
+@media screen and (max-width: 768px) {
+  #meritGeneralBox .topMeritBox02 .meritBox0201 span {
+    font-size: 3rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  #meritGeneralBox .topMeritBox02 .meritBox0201 span {
+    font-size: 2rem;
+  }
 }
 #meritGeneralBox .topMeritBox02 .meritBox0202 {
   position: absolute;
@@ -1875,6 +2031,16 @@ button {
   font-size: 2rem;
   font-weight: bold;
 }
+@media screen and (max-width: 768px) {
+  #meritGeneralBox .topMeritBox03 .topMeritBox03Text h2 {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  #meritGeneralBox .topMeritBox03 .topMeritBox03Text h2 {
+    font-size: 1.2rem;
+  }
+}
 #meritGeneralBox .topMeritBox03 .topMeritBox03Text p {
   margin: 2rem;
 }
@@ -1901,6 +2067,16 @@ button {
   color: #2E6256;
   text-align: center;
 }
+@media screen and (max-width: 768px) {
+  #meritGeneralBox .meritArrow {
+    font-size: 5rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  #meritGeneralBox .meritArrow {
+    font-size: 3rem;
+  }
+}
 
 .minusMargin .headerImg {
   width: 100%;
@@ -1915,10 +2091,12 @@ button {
   font-size: 2.5rem;
   font-weight: bold;
   text-align: center;
+  margin: 8rem auto 0;
 }
 @media screen and (max-width: 768px) {
   .minusMargin .headerImg {
     font-size: 2rem;
+    margin: 5rem auto 0;
   }
 }
 @media screen and (max-width: 500px) {
@@ -1935,7 +2113,7 @@ button {
   margin-bottom: 5rem;
   margin-top: 5rem;
   display: flex;
-  padding: 5rem;
+  padding: 3rem;
   justify-content: center;
   align-items: center;
   position: relative;
@@ -1956,7 +2134,7 @@ button {
   position: absolute;
   left: -20%;
   top: 80%;
-  width: 100px;
+  max-width: 100px;
 }
 @media screen and (max-width: 768px) {
   .vendorImg01 {
@@ -1966,18 +2144,34 @@ button {
 }
 @media screen and (max-width: 500px) {
   .vendorImg01 {
-    width: 80px;
+    max-width: 80px;
+    top: 80%;
   }
+}
+.vendorImg01 img {
+  width: 100%;
 }
 
 .recruitingP {
   text-align: center;
+}
+@media screen and (max-width: 500px) {
+  .recruitingP {
+    text-align: left;
+  }
+  .recruitingP br:nth-child(1) {
+    display: none;
+  }
+  .recruitingP br:nth-child(2) {
+    display: none;
+  }
 }
 
 .vendorImg02 {
   position: absolute;
   right: -20%;
   top: -20%;
+  max-width: 100px;
 }
 @media screen and (max-width: 768px) {
   .vendorImg02 {
@@ -1986,10 +2180,13 @@ button {
 }
 @media screen and (max-width: 500px) {
   .vendorImg02 {
-    width: 80px;
+    max-width: 80px;
     right: 0%;
-    top: -10%;
+    top: -15%;
   }
+}
+.vendorImg02 img {
+  max-width: 100%;
 }
 
 #sectionVendor {
@@ -2044,6 +2241,11 @@ button {
   margin-bottom: 5rem;
   text-align: center;
 }
+@media screen and (max-width: 500px) {
+  #sectionVendor .venderTopP {
+    text-align: left;
+  }
+}
 #sectionVendor .venderBottomP {
   text-align: center;
 }
@@ -2086,7 +2288,12 @@ button {
 }
 
 .minusMargin {
-  margin: 0 -0.5rem;
+  margin: 8rem -0.5rem;
+}
+@media screen and (max-width: 768px) {
+  .minusMargin {
+    margin: 5rem -0.5rem;
+  }
 }
 .minusMargin .infoGeneral {
   width: 100%;
@@ -2198,29 +2405,31 @@ button {
 }
 #infoKoeki .calender {
   width: 16vw;
+  min-width: 100px;
   height: auto;
   position: absolute;
-  top: 9vh;
-  left: 5vw;
+  top: 100%;
+  left: 5%;
 }
 #infoKoeki .calender img {
   width: 100%;
   height: 100%;
 }
 #infoKoeki .friends {
-  width: 12vw;
+  width: 16vw;
+  min-width: 100px;
   height: auto;
   position: absolute;
-  top: 5vh;
-  left: 80vw;
+  top: 50%;
+  left: 80%;
 }
 @media screen and (max-width: 768px) {
   #infoKoeki .friends {
-    top: 6vh;
+    top: 6%;
   }
 }
 #infoKoeki .friends img {
-  width: 100%;
+  width: 80%;
   height: 100%;
 }
 
@@ -2309,10 +2518,16 @@ button {
 }
 #infoAcade .detaMan {
   width: 16vw;
+  min-width: 100px;
   height: auto;
   position: absolute;
-  top: 8vh;
-  left: 5vw;
+  top: 8%;
+  left: 6%;
+}
+@media screen and (max-width: 768px) {
+  #infoAcade .detaMan {
+    top: 100%;
+  }
 }
 #infoAcade .detaMan img {
   width: 100%;
@@ -2320,10 +2535,21 @@ button {
 }
 #infoAcade .shorui {
   width: 12vw;
+  min-width: 100px;
   height: auto;
   position: absolute;
   top: 10vh;
-  left: 80vw;
+  left: 80%;
+}
+@media screen and (max-width: 768px) {
+  #infoAcade .shorui {
+    left: 75%;
+  }
+}
+@media screen and (max-width: 500px) {
+  #infoAcade .shorui {
+    left: 70%;
+  }
 }
 #infoAcade .shorui img {
   width: 100%;
@@ -2345,8 +2571,9 @@ button {
   margin-top: 8vh;
   font-size: 2rem;
   padding: 1rem 5rem;
-  border-bottom-width: medium;
-  border-bottom-color: #E4C22B;
+  text-align: center;
+  border-bottom: 3px solid #E4C22B;
+  display: inline-block;
 }
 @media screen and (max-width: 768px) {
   .infoAcadeCont .infoAcadeCont01 h2 {
@@ -2357,6 +2584,9 @@ button {
   .infoAcadeCont .infoAcadeCont01 h2 {
     font-size: 1rem;
   }
+}
+.infoAcadeCont .infoAcadeCont01 .infoAcadeh2 {
+  width: 500px;
 }
 .infoAcadeCont .infoAcadeCont02 {
   display: flex;
@@ -2489,10 +2719,12 @@ button {
   background-size: cover;
   background-position: center;
   height: 20vh;
+  margin: 8rem auto 0;
 }
 @media screen and (max-width: 768px) {
   .qaTitle {
     font-size: 2rem;
+    margin: 5rem auto 0;
   }
 }
 @media screen and (max-width: 500px) {
@@ -2505,6 +2737,7 @@ button {
   position: absolute;
   top: 6%;
   left: 80%;
+  max-width: 100px;
 }
 @media screen and (max-width: 768px) {
   .qaImg1 {
@@ -2514,15 +2747,28 @@ button {
 @media screen and (max-width: 500px) {
   .qaImg1 {
     top: 4%;
-    left: 70%;
+    max-width: 80px;
   }
+}
+.qaImg1 img {
+  width: 100%;
 }
 
 .qaImg2 {
   position: absolute;
   top: -5%;
   left: 0%;
+  max-width: 100px;
 }
+@media screen and (max-width: 500px) {
+  .qaImg2 {
+    max-width: 80px;
+  }
+}
+.qaImg2 img {
+  width: 100%;
+}
+
 .qa_li {
   background-color: #ffffff;
   width: 80%;
@@ -2867,7 +3113,7 @@ footer #footerWrap .footer00 .footer02 {
 @media screen and (max-width: 768px) {
   footer #footerWrap .footer00 .footer02 {
     width: 20%;
-    font-size: 1rem;
+    font-size: 14px;
     line-height: 1.8rem;
     height: 300px;
     padding: 3rem 0 0 2%;
@@ -2898,7 +3144,7 @@ footer #footerWrap .footer00 .footer03 {
 }
 @media screen and (max-width: 768px) {
   footer #footerWrap .footer00 .footer03 {
-    font-size: 15px;
+    font-size: 14px;
     line-height: 1.6rem;
     width: 25%;
     min-width: 100px;
@@ -2960,7 +3206,7 @@ footer #footerWrap .footer00 .footer04 {
   }
 }
 footer #footerWrap .footer00 .footer04 .pageTop {
-  width: 140px;
+  max-width: 140px;
   height: auto;
 }
 footer #footerWrap .footer00 .footer04 .pageTop img {
@@ -2974,13 +3220,17 @@ footer #footerWrap .footer00 .footer04 .pageTop img {
 @media screen and (max-width: 500px) {
   footer #footerWrap .footer00 .footer04 .pageTop {
     width: 80px;
+    position: fixed;
+    top: 90%;
+    right: 2%;
+    z-index: 10;
   }
 }
 footer #footerWrap .footer00 .footer04 .logos {
   display: flex;
   justify-content: center;
   gap: 30px;
-  padding-top: 80px;
+  padding-top: 7rem;
   width: 200px;
   height: auto;
 }

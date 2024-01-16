@@ -17,7 +17,10 @@
 }
 
 .minusMargin {
-    margin: 0 -0.5rem;
+    margin: 8rem -0.5rem;
+    @include b.mq(tab) {
+        margin: 5rem -0.5rem;
+    }
 
     .infoGeneral {
         width: 100%;
@@ -134,10 +137,11 @@
 
     .calender {
         width: 16vw;
+        min-width: 100px;
         height: auto;
         position: absolute;
-        top: 9vh;
-        left: 5vw;
+        top: 100%;
+        left: 5%;
 
         & img {
             width: 100%;
@@ -146,18 +150,19 @@
     }
 
     .friends {
-        width: 12vw;
+        width: 16vw;
+        min-width: 100px;
         height: auto;
         position: absolute;
-        top: 5vh;
-        left: 80vw;
+        top: 50%;
+        left: 80%;
 
         @include b.mq(tab) {
-            top: 6vh;
+            top: 6%;
         }
 
         & img {
-            width: 100%;
+            width: 80%;
             height: 100%;
         }
     }
@@ -249,10 +254,15 @@
 
     .detaMan {
         width: 16vw;
+        min-width: 100px;
         height: auto;
         position: absolute;
-        top: 8vh;
-        left: 5vw;
+        top: 8%;
+        left: 6%;
+
+        @include b.mq(tab) {
+            top: 100%;
+        }
 
         & img {
             width: 100%;
@@ -262,14 +272,19 @@
 
     .shorui {
         width: 12vw;
+        min-width: 100px;
         height: auto;
         position: absolute;
         top: 10vh;
-        left: 80vw;
+        left: 80%;
 
-        @include b.mq(tab) {}
+        @include b.mq(tab) {
+            left: 75%;
+        }
 
-        @include b.mq(mob) {}
+        @include b.mq(mob) {
+            left: 70%;
+        }
 
         & img {
             width: 100%;
@@ -297,8 +312,9 @@
             margin-top: 8vh;
             font-size: 2rem;
             padding: 1rem 5rem;
-            border-bottom-width: medium;
-            border-bottom-color: #E4C22B;
+            text-align: center;
+            border-bottom: 3px solid doru.$yellowColor;
+            display: inline-block;
 
             @include b.mq(tab) {
                 font-size: 1.5rem;
@@ -308,11 +324,16 @@
                 font-size: 1rem;
             }
         }
+
+        .infoAcadeh2{
+width: 500px;
+        }
     }
 
     .infoAcadeCont02 {
         display: flex;
         justify-content: center;
+
         gap: 4rem;
         margin: 8vh auto;
 

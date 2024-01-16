@@ -24,8 +24,8 @@
         }
 
         .drowerLi {
-            background-color: #FFFFFF;
-            border: 1px solid  #B5B5B5;
+            color: white;
+            background-color: doru.$yellowColor;
             border-radius: 1rem;
             margin-top: 2.5rem;
             padding-top: 0.75rem;
@@ -114,8 +114,10 @@
     #drawerMenu {
         position: fixed;
         top: 0;
-        right: -240px;
+        right: -100%;
         transition: all 0.3s linear;
+        width: 100%;
+        max-width: 200px;
     }
 
     #drawerMenu.open {
@@ -125,14 +127,8 @@
 
     #drawerMenu ul {
         display: block;
-        width: 200px;
-        height: 450px;
-        padding: 80px 20px 20px 20px;
-        // background: rgb(242, 242, 242);
-        background-color: #FFFFFF;
-        border-top: 2px solid doru.$yellowColor;
-        border-left: 2px solid doru.$yellowColor;
-        border-bottom: 2px solid doru.$yellowColor;
+        padding: 20px 20px 20px 20px;
+        background-color: doru.$yellowColor;
         overflow: hidden;
         text-align: center;
         list-style-type: none;
@@ -142,6 +138,7 @@
     }
 
     #drawerMenu li {
+        color: white;
         width: 100%;
     }
 
@@ -156,7 +153,7 @@
         transition: 0.5s;
     }
 
-    a::after {
+    #drawerMenu a::after {
         position: absolute;
         bottom: .3em;
         left: 0;
@@ -168,7 +165,7 @@
         transition: .3s;
     }
 
-    a:hover::after {
+    #drawerMenu a:hover::after {
         bottom: 0;
         color: doru.$fontColor;
         transition: 0.4s;

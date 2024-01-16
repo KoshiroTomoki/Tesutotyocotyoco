@@ -2,7 +2,7 @@
 @use "breakpoint" as b;
 
 .minusMargin {
-    
+
     .headerImg {
         width: 100%;
         height: 20vh;
@@ -16,9 +16,11 @@
         font-size: 2.5rem;
         font-weight: bold;
         text-align: center;
+        margin: 8rem auto 0;
 
         @include b.mq(tab) {
             font-size: 2rem;
+            margin: 5rem auto 0;
         }
 
         @include b.mq(mob) {
@@ -36,7 +38,7 @@
     margin-bottom: 5rem;
     margin-top: 5rem;
     display: flex;
-    padding: 5rem;
+    padding: 3rem;
     justify-content: center;
     align-items: center;
     // gap: 10px;
@@ -56,7 +58,7 @@
     position: absolute;
     left: -20%;
     top: 80%;
-    width: 100px;
+    max-width: 100px;
 
     @include b.mq(tab) {
         left: -10%;
@@ -64,30 +66,50 @@
     }
 
     @include b.mq(mob) {
-        width: 80px;
+        max-width: 80px;
+        top: 80%;
     }
 
-
+    img {
+        width: 100%;
+    }
 
 }
 
 .recruitingP {
     text-align: center;
+
+    @include b.mq(mob) {
+        text-align: left;
+
+        br:nth-child(1) {
+            display: none;
+        }
+
+        br:nth-child(2) {
+            display: none;
+        }
+    }
 }
 
 .vendorImg02 {
     position: absolute;
     right: -20%;
     top: -20%;
+    max-width: 100px;
 
     @include b.mq(tab) {
         right: 0%;
     }
 
     @include b.mq(mob) {
-        width: 80px;
+        max-width: 80px;
         right: 0%;
-        top: -10%;
+        top: -15%;
+    }
+
+    img {
+        max-width: 100%;
     }
 }
 
@@ -129,7 +151,6 @@
                 width: 40%;
                 right: 20%;
             }
-
         }
     }
 
@@ -141,16 +162,17 @@
         @include b.mq(mob) {
             font-size: 1.5rem;
         }
-
     }
 
     .venderTopP {
         margin-top: 2rem;
         margin-bottom: 5rem;
         text-align: center;
+
+        @include b.mq(mob) {
+            text-align: left;
+        }
     }
-
-
 
     .venderBottomP {
         text-align: center;
@@ -166,8 +188,6 @@
         flex-direction: column;
         align-items: center;
         margin: 1rem;
-
-        // img {}
     }
 
     .vendorImg05 {
