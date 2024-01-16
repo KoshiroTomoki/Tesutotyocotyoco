@@ -2358,7 +2358,6 @@ button {
 @media screen and (max-width: 500px) {
   .infoComment p:nth-child(3) {
     top: -10%;
-    left: 78%;
   }
   .infoComment p:nth-child(3) img {
     width: 80px;
@@ -2404,21 +2403,18 @@ button {
   height: 100%;
 }
 #infoKoeki .friends {
-  width: 16vw;
-  min-width: 100px;
-  height: auto;
+  max-width: 150px;
   position: absolute;
   top: 50%;
   left: 80%;
 }
 @media screen and (max-width: 768px) {
   #infoKoeki .friends {
-    top: 6%;
+    left: 75%;
   }
 }
 #infoKoeki .friends img {
   width: 80%;
-  height: 100%;
 }
 
 .infoKoekiCont {
