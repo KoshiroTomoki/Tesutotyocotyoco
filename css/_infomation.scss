@@ -4,11 +4,11 @@
 #infoWrap {
     width: 100%;
     background-color: #FCFAF2;
-    margin: 0 -0.5;
 }
 
 .minusMargin {
     margin: 8rem -0.5rem;
+
     @include b.mq(tab) {
         margin: 5rem -0.5rem;
     }

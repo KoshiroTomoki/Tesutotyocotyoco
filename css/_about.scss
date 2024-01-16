@@ -2,10 +2,10 @@
 @use "breakpoint" as b;
 
 #aboutTop {
-    margin: 8rem -0.5rem 7rem;
+    margin:8rem -0.5rem 7rem;
 
     @include b.mq(tab) {
-        margin: 5rem -0.5rem 7rem;
+        margin:5rem -0.5rem 7rem;
     }
 
     .aboutTop {
@@ -122,7 +122,6 @@
             top: 105%;
             left: -10%;
         }
-
         img {
             width: 80px;
         }
