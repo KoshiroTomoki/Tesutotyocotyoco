@@ -3,17 +3,8 @@
 
 #infoWrap {
     width: 100%;
-    height: 500vh;
     background-color: #FCFAF2;
     margin: 0 -0.5;
-
-    @include b.mq(tab) {
-        height: 1000vh;
-    }
-
-    @include b.mq(mob) {
-        height: 700vh;
-    }
 }
 
 .minusMargin {
