@@ -2486,7 +2486,7 @@ button {
 
 #infoAcade {
   width: 100%;
-  margin: 30vh auto 10vh;
+  margin: 10rem 0 3rem;
   position: relative;
 }
 #infoAcade h1 {
@@ -2509,7 +2509,7 @@ button {
   min-width: 100px;
   height: auto;
   position: absolute;
-  top: 8%;
+  top: 100%;
   left: 6%;
 }
 @media screen and (max-width: 768px) {
@@ -3209,7 +3209,7 @@ footer #footerWrap .footer00 .footer04 .pageTop img {
   footer #footerWrap .footer00 .footer04 .pageTop {
     width: 80px;
     position: fixed;
-    top: 90%;
+    top: 85%;
     right: 2%;
     z-index: 10;
   }

@@ -239,7 +239,6 @@ footer {
                     max-width: 140px;
                     height: auto;
 
-
                     & img {
                         width: 100%;
                     }
@@ -251,7 +250,7 @@ footer {
                     @include b.mq(mob) {
                         width: 80px;
                         position: fixed;
-                        top: 90%;
+                        top: 85%;
                         right: 2%;
                         z-index: 10;
                     }

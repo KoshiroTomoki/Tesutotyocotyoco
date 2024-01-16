@@ -226,7 +226,7 @@
 
 #infoAcade {
     width: 100%;
-    margin: 30vh auto 10vh;
+    margin: 10rem 0 3rem;
     position: relative;
 
     & h1 {
@@ -248,7 +248,7 @@
         min-width: 100px;
         height: auto;
         position: absolute;
-        top: 8%;
+        top: 100%;
         left: 6%;
 
         @include b.mq(tab) {
