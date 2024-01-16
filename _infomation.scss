@@ -1,0 +1,442 @@
+@use "doru";
+@use "breakpoint" as b;
+
+#infoWrap {
+    width: 100%;
+    background-color: #FCFAF2;
+    margin: 0 -0.5;
+}
+
+.minusMargin {
+    margin: 8rem -0.5rem;
+    @include b.mq(tab) {
+        margin: 5rem -0.5rem;
+    }
+
+    .infoGeneral {
+        width: 100%;
+        height: 20vh;
+        background-image: url("../images/infomation/topImageInfo.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        & h1 {
+            font-size: 2.5rem;
+            font-weight: bold;
+
+            @include b.mq(tab) {
+                font-size: 2rem;
+            }
+
+            @include b.mq(mob) {
+                font-size: 1.5rem;
+            }
+        }
+    }
+}
+
+.infoComment {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+    position: relative;
+
+    & p:nth-child(1) {
+        line-height: 1.7;
+        padding: 5rem;
+        width: 70%;
+        text-align: center;
+
+        @include b.mq(tab) {
+            width: 70%;
+            padding: 2rem;
+        }
+
+        @include b.mq(mob) {
+            width: 80%;
+        }
+    }
+
+    & p:nth-child(2) {
+        position: absolute;
+        top: 60%;
+        left: 10%;
+        width: 10%;
+
+        @include b.mq(tab) {}
+
+        @include b.mq(mob) {
+            top: 80%;
+            left: -2%;
+
+            img {
+                width: 80px;
+                height: auto;
+            }
+        }
+    }
+
+    & p:nth-child(3) {
+        position: absolute;
+        top: -10%;
+        left: 75%;
+        width: 10%;
+
+        @include b.mq(tab) {}
+
+        @include b.mq(mob) {
+            top: -10%;
+            left: 78%;
+
+            img {
+                width: 80px;
+                height: auto;
+            }
+        }
+    }
+}
+
+#infoKoeki {
+    width: 100%;
+    margin: 9vh auto;
+    position: relative;
+
+    @include b.mq(tab) {
+        margin: 9vh auto 4vh;
+    }
+
+    @include b.mq(mob) {}
+
+    & h1 {
+        text-align: center;
+        font-size: 3rem;
+        font-weight: bold;
+
+        @include b.mq(tab) {
+            font-size: 2.5rem;
+        }
+
+        @include b.mq(mob) {
+            font-size: 2rem;
+        }
+    }
+
+    .calender {
+        width: 16vw;
+        min-width: 100px;
+        height: auto;
+        position: absolute;
+        top: 100%;
+        left: 5%;
+
+        & img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .friends {
+        width: 16vw;
+        min-width: 100px;
+        height: auto;
+        position: absolute;
+        top: 50%;
+        left: 80%;
+
+        @include b.mq(tab) {
+            top: 6%;
+        }
+
+        & img {
+            width: 80%;
+            height: 100%;
+        }
+    }
+}
+
+.infoKoekiCont {
+    margin: 0 auto;
+    width: 80vw;
+    background-color: white;
+    border-radius: 1rem;
+
+    .infoKoekiCont01 {
+        display: flex;
+        justify-content: center;
+        gap: 1vw;
+        padding: 1rem;
+        background-color: white;
+        border-radius: 1rem;
+
+        @include b.mq(tab) {
+            display: block;
+        }
+
+        @include b.mq(mob) {}
+    }
+
+    .infoKoekiCont02 {
+        margin: 4vh auto;
+        width: 40%;
+        padding: 1rem;
+
+        @include b.mq(tab) {
+            margin: 8vh auto 0;
+            width: 80%;
+            padding: 0;
+        }
+
+        @include b.mq(mob) {
+            margin: 2vh auto 0;
+            width: 80%;
+        }
+
+        & img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    .infoKoekiCont03 {
+        margin: 4vh auto 0;
+        width: 40%;
+        padding: 1rem;
+
+        @include b.mq(tab) {
+            margin: 8vh auto 0;
+            width: 80%;
+            padding: 0;
+        }
+
+        @include b.mq(mob) {
+            width: 80%;
+        }
+
+        & img {
+            width: 100%;
+            height: auto;
+        }
+    }
+}
+
+#infoAcade {
+    width: 100%;
+    margin: 30vh auto 10vh;
+    position: relative;
+
+    & h1 {
+        text-align: center;
+        font-size: 3rem;
+        font-weight: bold;
+
+        @include b.mq(tab) {
+            font-size: 2.5rem;
+        }
+
+        @include b.mq(mob) {
+            font-size: 2rem;
+        }
+    }
+
+    .detaMan {
+        width: 16vw;
+        min-width: 100px;
+        height: auto;
+        position: absolute;
+        top: 8%;
+        left: 6%;
+
+        @include b.mq(tab) {
+            top: 100%;
+        }
+
+        & img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .shorui {
+        width: 12vw;
+        min-width: 100px;
+        height: auto;
+        position: absolute;
+        top: 10vh;
+        left: 80%;
+
+        @include b.mq(tab) {
+            left: 75%;
+        }
+
+        @include b.mq(mob) {
+            left: 70%;
+        }
+
+        & img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+.infoAcadeCont {
+    margin: 0 auto 5rem;
+    padding-bottom: 2rem;
+    width: 80vw;
+    background-color: white;
+    border-radius: 1rem;
+
+    @include b.mq(tab) {}
+
+    @include b.mq(mob) {}
+
+    .infoAcadeCont01 {
+        display: flex;
+        justify-content: center;
+
+        & h2 {
+            margin-top: 8vh;
+            font-size: 2rem;
+            padding: 1rem 5rem;
+            text-align: center;
+            border-bottom: 3px solid doru.$yellowColor;
+            display: inline-block;
+
+            @include b.mq(tab) {
+                font-size: 1.5rem;
+            }
+
+            @include b.mq(mob) {
+                font-size: 1rem;
+            }
+        }
+
+        .infoAcadeh2{
+width: 500px;
+        }
+    }
+
+    .infoAcadeCont02 {
+        display: flex;
+        justify-content: center;
+
+        gap: 4rem;
+        margin: 8vh auto;
+
+        @include b.mq(tab) {
+            display: block;
+        }
+
+        @include b.mq(mob) {
+            display: block;
+        }
+
+        & img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .infoAcadeCont03 {
+        margin: 0 auto;
+        width: 40%;
+
+        @include b.mq(tab) {
+            width: 80%;
+        }
+
+        @include b.mq(mob) {
+            width: 80%;
+        }
+
+        & img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .infoAcadeCont04 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: baseline;
+        width: 40%;
+
+        @include b.mq(tab) {
+            width: 80%;
+            align-items: center;
+            margin: 2rem auto;
+        }
+
+        @include b.mq(mob) {
+            width: 80%;
+            align-items: center;
+        }
+
+        & p {
+            line-height: 1.7;
+            text-align: left;
+        }
+
+        & img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .infoKoekiCont01 {
+        margin: 4rem auto 0;
+        display: flex;
+        justify-content: center;
+        gap: 3vw;
+
+        @include b.mq(tab) {
+            display: block;
+        }
+
+        @include b.mq(mob) {
+            display: block;
+        }
+    }
+
+    .infoKoekiCont02 {
+        margin: 4vh auto;
+        width: 40%;
+
+        @include b.mq(tab) {
+            width: 80%;
+        }
+
+        @include b.mq(mob) {
+            width: 80%;
+        }
+
+        & img {
+            width: 100%;
+            height: 60%;
+        }
+    }
+
+    .infoKoekiCont03 {
+        margin: 4vh auto;
+        width: 40%;
+
+        @include b.mq(tab) {
+            width: 80%;
+        }
+
+        @include b.mq(mob) {
+            width: 80%;
+        }
+
+        & img {
+            width: 100%;
+            height: 60%;
+        }
+    }
+}
