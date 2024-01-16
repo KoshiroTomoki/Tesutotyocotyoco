@@ -1,2 +1,455 @@
 @use "doru";
 @use "breakpoint" as b;
+
+button {
+    color: #ffffff;
+}
+
+.tab-area {
+    margin: 0 auto;
+}
+
+.tab-list {
+    display: flex;
+    column-gap: 2px;
+    width: 350px;
+    max-width: 100%;
+    margin: 0 auto;
+    transition: width 0.5s ease;
+    /* アニメーションの設定 */
+}
+
+.tab {
+    cursor: pointer;
+    flex: 1;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #b5b5b5;
+    text-align: center;
+    border-radius: 15px 15px 0 0;
+    transition: width 0.5s ease;
+    /* アニメーションの設定 */
+}
+
+.tab.-active {
+    text-align: center;
+
+    &.general {
+        background-color: doru.$yellowColor;
+    }
+
+    &.member {
+        background-color: doru.$greenColor;
+    }
+}
+
+.tab-panel {
+    max-width: 100%;
+    width: 1000px;
+    background-color: #ffffff;
+    padding: 20px;
+    display: none;
+    border: 1px solid #b5b5b5;
+    line-height: 1.75;
+    border-radius: 16px;
+}
+
+.tab-panel.-active {
+    display: block;
+    max-width: 100%;
+    width: 1000px;
+    background-color: #ffffff;
+
+    &.general {
+        border: solid 5px doru.$yellowColor;
+    }
+
+    &.member {
+        border: solid 5px doru.$greenColor;
+    }
+}
+
+
+
+
+/////////////////////  topSectionMerit
+#meritMemberBox {
+    margin: 0 auto;
+    position: relative;
+
+    .topMeritBox01 {
+        margin: 2rem 0;
+
+        .meritBox0101 {
+            position: absolute;
+            top: 4rem;
+            left: 3rem;
+
+            @include b.mq(tab) {
+                position: unset;
+                text-align: center;
+                margin-bottom: 3rem;
+            }
+        }
+
+        .meritBox0102 {
+            margin-bottom: 5rem;
+            text-align: center;
+
+            @include b.mq(tab) {
+                margin-bottom: 2rem;
+            }
+
+            h2 {
+                font-size: 2rem;
+                font-weight: bold;
+                margin-bottom: 2rem;
+
+                @include b.mq(tab) {
+                    font-size: 1.5rem;
+                }
+
+                @include b.mq(mob) {
+                    font-size: 1.2rem;
+                }
+            }
+
+            span {
+                font-size: 3rem;
+                margin-right: 1rem;
+                color: doru.$greenColor;
+            }
+
+            p {
+                padding-bottom: 1rem;
+            }
+
+            p::before {
+                content: "?";
+                font-size: 1.5rem;
+                font-weight: bold;
+                margin-right: 1rem;
+                color: #ff7171;
+            }
+
+            .meitBox01Text {
+                text-align: center;
+                margin: 0 auto;
+            }
+        }
+    }
+
+    .topMeritBox02 {
+        position: relative;
+
+        .meritBox0201 {
+            text-align: center;
+            margin: 0 auto;
+
+            h2 {
+                font-size: 2rem;
+                font-weight: bold;
+                margin-bottom: 3rem;
+
+                @include b.mq(mob) {
+                    margin-bottom: 2rem;
+                }
+
+                span {
+                    font-size: 3rem;
+                    color: doru.$yellowColor;
+                    margin-right: 1rem;
+                }
+            }
+        }
+
+        .meritBox0202 {
+            position: absolute;
+            top: -3rem;
+            right: 1rem;
+
+            @include b.mq(tab) {
+                position: unset;
+                margin-left: 1.5rem;
+                text-align: center;
+            }
+        }
+
+
+        .meritBox0203 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            @include b.mq(tab) {
+                flex-direction: column;
+            }
+
+            .meritBox020301 {
+                position: relative;
+
+                p {
+                    margin: 2rem;
+                }
+
+                .merit020301Text {
+                    text-align: center;
+                    width: 7rem;
+                    position: absolute;
+                    top: 40%;
+                    transform: translate(-50%, -50%);
+                    margin-left: 7.2rem;
+                    color: white;
+                }
+            }
+        }
+    }
+
+    .meritArrow {
+        font-size: 7rem;
+        color: doru.$yellowColor;
+        text-align: center;
+    }
+
+    .topMeritBox03 {
+        justify-content: center;
+        align-items: center;
+        margin-top: 2rem;
+
+        .topMeritBox03Text {
+            text-align: center;
+
+            h2 {
+                font-size: 2rem;
+                font-weight: bold;
+            }
+
+            p {
+                margin: 2rem;
+            }
+        }
+
+        .meritContactBox {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+
+            .meritContact {
+                margin: 3rem;
+
+                @include b.mq(tab) {
+                    margin: 1rem;
+                }
+
+                p {
+                    text-align: center;
+                    font-weight: Bold;
+                }
+            }
+        }
+    }
+
+    .linkYellow {
+        text-align: center;
+        margin: 0 auto;
+        background-color: white;
+        border: solid 8px doru.$yellowColor;
+        border-radius: 10rem;
+        font-size: 1.5rem;
+        width: 19rem;
+        text-align: center;
+        padding: 0.5rem;
+        transition: 0.5s;
+
+        @include b.mq(tab) {
+            margin-top: 2rem;
+            width: 13rem;
+            font-size: 1rem;
+            border: solid 5px doru.$yellowColor;
+        }
+    }
+}
+
+.linkYellow:hover {
+    box-shadow: none;
+}
+
+// member
+
+#meritGeneralBox {
+    margin: 0 auto;
+    position: relative;
+
+    h2 {
+        text-align: center;
+        font-size: 2rem;
+        margin: 2rem 0;
+
+        @include b.mq(tab) {
+            font-size: 1.5rem;
+        }
+
+        @include b.mq(mob) {
+            font-size: 1.2rem;
+        }
+
+        span {
+            font-size: 3rem;
+            margin-right: 1rem;
+            color: doru.$greenColor;
+
+            @include b.mq(tab) {
+                font-size: 3rem;
+            }
+
+            @include b.mq(mob) {
+                font-size: 2rem;
+            }
+        }
+    }
+
+    .meritBox0102 {
+        margin-bottom: 5rem;
+
+        h2 {
+            font-weight: bold;
+        }
+
+        @include b.mq(tab) {
+            margin-bottom: 2rem;
+        }
+
+        p {
+            padding-bottom: 1rem;
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        p::before {
+            content: "?";
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-right: 1rem;
+            color: #ff7171;
+        }
+
+
+        .meritBox0101 {
+            position: absolute;
+            top: 4rem;
+            left: 3rem;
+
+            @include b.mq(tab) {
+                position: unset;
+                text-align: center;
+                margin-bottom: 3rem;
+            }
+        }
+    }
+
+    .topMeritBox02 {
+        position: relative;
+
+        h2 {
+            font-weight: bold;
+        }
+
+        .meritBox0201 {
+            span {
+                font-size: 3rem;
+                color: doru.$yellowColor;
+                margin-right: 1rem;
+            }
+        }
+
+        .meritBox0202 {
+            position: absolute;
+            top: -3rem;
+            right: 1rem;
+
+            @include b.mq(tab) {
+                position: unset;
+                margin-left: 1.5rem;
+                text-align: center;
+            }
+        }
+
+        .meritBox0203 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            @include b.mq(tab) {
+                flex-direction: column;
+            }
+
+            .meritBox020301 {
+                position: relative;
+
+                p {
+                    margin: 2rem;
+                }
+
+                img {
+                    width: 171px;
+                }
+
+                .meritBox020301Text {
+                    text-align: center;
+                    width: 7rem;
+                    position: absolute;
+                    top: 40%;
+                    transform: translate(-50%, -50%);
+                    margin-left: 7.2rem;
+                    color: white;
+                }
+            }
+        }
+    }
+    .topMeritBox03 {
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 2rem;
+
+        .topMeritBox03Text {
+            text-align: center;
+
+            h2 {
+                font-size: 2rem;
+                font-weight: bold;
+            }
+
+            p {
+                margin: 2rem;
+            }
+        }
+
+        .meritContactBox {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+
+            .meritContact {
+                margin: 3rem;
+
+                @include b.mq(tab) {
+                    margin: 1rem;
+                }
+
+                p {
+                    text-align: center;
+                    font-weight: Bold;
+                }
+            }
+        }
+    }
+
+    .meritArrow {
+        font-size: 7rem;
+        color: doru.$greenColor;
+        text-align: center;
+    }
+}

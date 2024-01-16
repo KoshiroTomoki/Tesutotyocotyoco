@@ -14,50 +14,112 @@
 
 <body>
 
+
+    <!------------------------------------------ header -->
     <header>
+        <div class="headerWrap">
+
+            <nav class="headerNav01">
+                <ul>
+                    <li><img src="images/share/logologo.png" alt="ロゴ"></li>
+                    <li>
+                        <h1><a href="index.html">近畿柔道整復師会</a></h1>
+                    </li>
+                </ul>
+            </nav>
+
+            <nav class="headerNav02">
+                <ul>
+                    <li><a href=""><img src="images/share/facebookfacebook.png" alt="フェイスブック"></a></li>
+                    <li>
+                        <p class="headerP">TEL 000-000-000</br>FAX 000-000-000</p>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="menuWrap">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Top</a></li>
+                    <li><a href="about.html">私たちについて</a></li>
+                    <li><a href="infomation.html">情報一般</a></li>
+                    <li><a href="vendor.html">指定業者様へ</a></li>
+                    <li><a href="QandA.html">Q&A</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <button class="toggleButton">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <!-- ドロワーメニュー -->
+        <nav id="drawerMenu">
+            <ul>
+                <li><a href="index.html">Top</a></li>
+                <li><a href="about.html">私たちについて</a></li>
+                <li><a href="infomation.html">情報一般</a></li>
+                <li><a href="vendor.html">指定業者様へ</a></li>
+                <li><a href="QandA.html">Q&A</a></li>
+                <li class="drowerLi">
+                    TEL 000-000-000 FAX000-000-000
+                </li>
+            </ul>
+        </nav>
     </header>
 
+    <!------------------------------------------ main -->
     <main>
-    <h2 class="qaTitle">Q&A</h2>
+
+        <div class="minusMargin">
+            <h2 class="qaTitle">Q&A</h2>
+        </div>
         <div>
             <p class="qaImg1"><img src="images/share/bird.png" alt="鳥のイラスト"></p>
         </div>
 
         <div class="qa_li">
-            <dl>
-                <dt>入会するために必要なものは何ですか？また、費用はどれくらいかかるのですか？</dt>
-                <dd>各組合によって異なりますので、各組合にお問い合わせいただくか、リンク先のWEBサイトをご参照ください。</dd>
-                <dt>接骨院・整骨院を開設するための手続きには何がありますか？</dt>
-                <dd>開業予定地の保健所に「開設届」を提出する必要があります <br>
-                    （法規に準じた設備があるか保健所による検査があります。）</dd>
-                <dt>法人として入会できますか？</dt>
-                <dd>法人では入会できません。個人(施術所の院長)としてのみ入会できます。</dd>
-                <dt>申請してから入金までの期間はどれくらいかかりますか？</dt>
-                <dd>支給申請書の受付分が、最短で翌月末に会員登録口座に送金となります。<br>
-                    （例）1月施術分⇒2月5日～8日まで提出⇒最短3月末送金</dd>
-                <dt>開業にあたって融資をうけられますか？</dt>
-                <dd>本会自体では資金の融資を行ってはいませんが、低利で融資が受けられるよう取引銀行に紹介することが可能です。 <br>
-                    また、機器・設備などの低価格斡旋特典もあります。</dd>
-                <dt>講習会や研修会など会合への出席は義務づけられるのですか？</dt>
-                <dd>義務ではありません。強制されたり、出席しなかったことで咎められることもありません。参加は自由です。 <br>
-                    しかし、柔道整復師として仕事をする上で必要となる様々な情報や技術を得ることができたり、同じ資格同じ仕事をする多くの仲間との
-                    交流から得られるものは決して少なくはないと思います。</dd>
-                <dt>他団体から変更しての入会に関して</dt>
-                <dd>特別な事は一切ありません。新規の方の入会とまったく同じように手続きをして頂きます。すべて平等です。</dd>
-                <dt>開業するにあたり、柔道整復師組合に入会するのと、個人で開業するのと決定的な違いは何ですか？公益社団のメリットとは、いったい何ですか？</dt>
-                <dd>人や他団体の請求代行業者と公益社団法人との差は、何よりも社会的な信頼が高いということが最も大きな違いです。 <br>
-                    その他にも、保険請求や施術技術、学術に関する行き届いた講習会が多く開催され、なお且つ、柔道整復師として必要な情報が
-                    正確に広く公開されていることは、安心して日々の施術業務を進める上で欠かすことの出来ない環境と言えます。また、
-                    公益社団法人という組織は、営利目的の組織ではありません。その関係上、利益を上げる必要がないため、会費が安いことも
-                    大きな違いです。</dd>
-            </dl>
+            <div class="qa_liBox">
+                <dl>
+                    <dt>入会するために必要なものは何ですか？また、費用はどれくらいかかるのですか？</dt>
+                    <dd>各組合によって異なりますので、各組合にお問い合わせいただくか、リンク先のWEBサイトをご参照ください。</dd>
+                    <dt>接骨院・整骨院を開設するための手続きには何がありますか？</dt>
+                    <dd>開業予定地の保健所に「開設届」を提出する必要があります <br>
+                        （法規に準じた設備があるか保健所による検査があります。）</dd>
+                    <dt>法人として入会できますか？</dt>
+                    <dd>法人では入会できません。個人(施術所の院長)としてのみ入会できます。</dd>
+                    <dt>申請してから入金までの期間はどれくらいかかりますか？</dt>
+                    <dd>支給申請書の受付分が、最短で翌月末に会員登録口座に送金となります。<br>
+                        （例）1月施術分⇒2月5日～8日まで提出⇒最短3月末送金</dd>
+                    <dt>開業にあたって融資をうけられますか？</dt>
+                    <dd>本会自体では資金の融資を行ってはいませんが、低利で融資が受けられるよう取引銀行に紹介することが可能です。 <br>
+                        また、機器・設備などの低価格斡旋特典もあります。</dd>
+                    <dt>講習会や研修会など会合への出席は義務づけられるのですか？</dt>
+                    <dd>義務ではありません。強制されたり、出席しなかったことで咎められることもありません。参加は自由です。 <br>
+                        しかし、柔道整復師として仕事をする上で必要となる様々な情報や技術を得ることができたり、同じ資格同じ仕事をする多くの仲間との
+                        交流から得られるものは決して少なくはないと思います。</dd>
+                    <dt>他団体から変更しての入会に関して</dt>
+                    <dd>特別な事は一切ありません。新規の方の入会とまったく同じように手続きをして頂きます。すべて平等です。</dd>
+                    <dt>開業するにあたり、柔道整復師組合に入会するのと、個人で開業するのと決定的な違いは何ですか？公益社団のメリットとは、いったい何ですか？</dt>
+                    <dd>人や他団体の請求代行業者と公益社団法人との差は、何よりも社会的な信頼が高いということが最も大きな違いです。 <br>
+                        その他にも、保険請求や施術技術、学術に関する行き届いた講習会が多く開催され、なお且つ、柔道整復師として必要な情報が
+                        正確に広く公開されていることは、安心して日々の施術業務を進める上で欠かすことの出来ない環境と言えます。また、
+                        公益社団法人という組織は、営利目的の組織ではありません。その関係上、利益を上げる必要がないため、会費が安いことも
+                        大きな違いです。</dd>
+                </dl>
+            </div>
         </div>
+        <!-- Q&A -->
+
         <section class="Form">
             <h2>柔道整復師会<br>
                 お問合せ</h2>
-                <div>
-                    <p class="qaImg2"><img src="images/share/bird.png" alt="鳥のイラスト"></p>
-                </div>
+            <div>
+                <p class="qaImg2" id="FormTop"><img src="images/share/bird.png" alt="鳥のイラスト"></p>
+            </div>
             <form action="">
                 <table class="contactTable">
                     <tr class="contactBox">
@@ -148,21 +210,87 @@
                     </tr>
                     <tr class="contactBox">
                         <th class="contactItem">お問合せ内容</th>
-                        <td class="contactBody ">
+                        <td class="contactBody" colspan="2">
                             <textarea name="お問合せ内容" placeholder="お問合せ内容をご入力ください。" class="formTextarea"></textarea>
                         </td>
                     </tr>
                 </table>
                 <input class="contactSubmit" type="submit" value="送信" />
             </form>
-
+            <p class="qaImg3"><img src="images/QandA/qaImage1.png" alt="スーツの男性の画像"></p>
+            <p class="qaImg4"><img src="images/QandA/qaImage2.png" alt="スーツの女性の画像"></p>
         </section>
+        <!-- FORM -->
+
     </main>
 
     <footer>
+        <div id="footerWrap">
+            <div class="footer00">
+                <div class="footer01">
+                    <h4 class="footerH4title">INFO</h4>
+                    <h4>TEL 000-000-0000</h4>
+                    <h4>FAX 000-000-0000</h4><br>
+                    <h3><small>&copy;</small>公益社団法人</h3>
+                    <h2>近畿柔道整復師共同組合</h2>
+                    <a href="QandA.html#FormTop">
+                        <div class="footer01_nth1">お問合わせ</div>
+                    </a>
+                </div>
+                <div class="footer02">
+                    <a href="index.html">
+                        <p>HOME</p>
+                    </a>
+                    <a href="about.html">
+                        <p>私たちについて</p>
+                    </a>
+                    <a href="infomation.html">
+                        <p>公益活動</p>
+                    </a>
+                    <a href="vendor.html">
+                        <p>指定業者様へ</p>
+                    </a>
+                    <a href="QandA.html">
+                        <p>Q&A</p>
+                    </a>
+                </div>
+                <div class="footer03">
+                    <p>入会案内</p>
+                    <a href="https://hyogo-seifukushi.com/" target="_blank">
+                        <h4>兵庫県在住の方</h4>
+                    </a>
+                    <a href="https://www.nara-jusei.or.jp/kumiai.html" target="_blank">
+                        <h4>奈良県在住の方</h4>
+                    </a>
+                    <a href="https://shigajusei-kumiai.com/" target="_blank">
+                        <h4>滋賀県在住の方</h4>
+                    </a>
+                    <a href="http://www.miyako.or.jp/" target="_blank">
+                        <h4>京都府在住の方</h4>
+                    </a>
+                    <a href="https://wajusei-kumiai.net/" target="_blank">
+                        <h4>和歌山県在住の方</h4>
+                    </a>
+
+                </div>
+                <div class="footer04">
+                    <div class="pageTop">
+                        <a href="#"><img src="images/footer/pageTop.png" alt="トップページ"></a>
+                    </div>
+                    <div class="logos">
+                        <a href="" class="logo01"><img src="images/footer/facebook.png" alt="FaceBook"></a>
+                        <a href="" class="logo02"><img src="images/footer/logo_chocochoco.png" alt="ロゴ"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </footer>
 
     <script src="js/script.js"></script>
+    <script src="js/drower.js"></script>
+    <script src="js/swiper.js"></script>
+    <script src="js/merit.js"></script>
+    <script src="js/map.js"></script>
 </body>
 
 </html>

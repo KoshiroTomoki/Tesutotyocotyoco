@@ -1,10 +1,3 @@
-// const maps = document.querySelectorAll('.map');
-
-// maps.forEach((map) => {
-//     map.addEventListener('mouseover', () => {
-//         map.classList.add('active');
-//     });
-// });
 
 const maps = document.querySelectorAll('.map');
 
@@ -14,19 +7,19 @@ maps.forEach((map) => {
         // 他の.map要素からnoactiveクラスを削除
         maps.forEach((otherMap) => {
             if (otherMap !== map) {
-                otherMap.classList.remove('noactive');
+                otherMap.classList.remove('mapNoActive');
             }
         });
 
         // もしmouseoverをしている要素にactiveクラスがない場合、activeクラスを追加
-        if (!map.classList.contains('active')) {
-            map.classList.add('active');
+        if (!map.classList.contains('mapActive')) {
+            map.classList.add('mapActive');
         }
 
         // その他の.mapを持つ要素にnoactiveクラスを追加
         maps.forEach((otherMap) => {
-            if (otherMap !== map && !otherMap.classList.contains('active')) {
-                otherMap.classList.add('noactive');
+            if (otherMap !== map && !otherMap.classList.contains('mapActive')) {
+                otherMap.classList.add('mapNoActive');
             }
         });
     });
@@ -35,6 +28,6 @@ maps.forEach((map) => {
 // マウスが.mapに乗っていない場合はactiveとnoactiveクラスを削除
 document.addEventListener('mouseout', () => {
     maps.forEach((map) => {
-        map.classList.remove('active', 'noactive','active2');
+        map.classList.remove('mapActive', 'mapNoActive');
     });
 });

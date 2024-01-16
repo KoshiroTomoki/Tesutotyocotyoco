@@ -1,179 +1,299 @@
 @use "doru";
 @use "breakpoint" as b;
 
-#footerWrap {
-    width: 100%;
-    height: 400px;
-    background-color: #E4C22B;
+footer {
+    position: relative;
 
+    #footerWrap {
+        width: 100%;
+        height: 400px;
+        background-color: #E4C22B;
 
-    .footer00 {
-        display: flex;
-        justify-content: left;
         @include b.mq(tab) {
-            display: block;
+            height: 300px;
         }
 
-        @include b.mq(mob) {
-            display: block;
-        }
+        @include b.mq(mob) {}
 
 
-        .footer01 {
-            border-block-start: solid;
-            border-block-start-color: #E4C22B;
-            border-block-start-width: 4px;
-            writing-mode: horizontal-tb;
-
-            background-color: white;
+        .footer00 {
             display: flex;
-            flex-direction: column;
-            justify-content: center;
-            text-align: left;
-            padding: 4vw;
-
-            width: 35vw;
-            height: 400px;
+            justify-content: left;
 
             @include b.mq(tab) {
-                width: 100%;
-            }
-    
-            @include b.mq(mob) {
-                width: 100%;
+                justify-content: left;
             }
 
-            .footer01_nth1 {
-                width: 14vw;
-                height: 10vh;
-                font-size: 1.6rem;
-                color: white;
-                text-align: center;
-                padding: 0.5rem;
-                border-radius: 1rem;
-                background-color: #E4C22B;
-                @include b.mq(tab) {
-                    width: 40vw;
-                }
-        
-                @include b.mq(mob) {
-                    width: 80vw;
-                }
-            }
+            @include b.mq(mob) {}
 
-            & h2 {
-                font-size: 1.5rem;
-                padding-bottom: 1rem;
-            }
+            .footer01 {
+                border-block-start: solid;
+                border-block-start-color: #E4C22B;
+                border-block-start-width: 4px;
+                // writing-mode: horizontal-tb;
 
-            & h3 {
-                font-size: 1.2rem;
-            }
-
-            & h4 {
-                font-size: 1rem;
-            }
-
-        }
-
-        .footer02 {
-            display: flex;
-            flex-direction: column;
-            align-items: first baseline;
-            width: 16%;
-            height: 400px;
-            color: white;
-            padding: 3rem 0 0 4%;
-            line-height: 2rem;
-            font-size: 1.2rem;
-            @include b.mq(tab) {
-                width: 100%;
-                background-color: #E4C22B;
-                align-items: center;
-                height: 300px;
-            }
-    
-            @include b.mq(mob) {
-                width: 100%;
-                background-color: #E4C22B;
-                align-items: center;
-                height: 300px;
-            }
-        }
-
-        .footer03 {
-            display: flex;
-            flex-direction: column;
-            align-items: first baseline;
-            width: 16vw;
-            height: 400px;
-            color: white;
-            padding: 3rem 0 0 4rem;
-            line-height: 2rem;
-            font-size: 1.2rem;
-            @include b.mq(tab) {
-                width: 100%;
-                background-color: #E4C22B;
-                align-items: center;
-            }
-    
-            @include b.mq(mob) {
-                width: 100%;
-                background-color: #E4C22B;
-                align-items: center;
-                height: 300px;
-            }
-
-            & h4 {
-                font-size: 0.8rem;
-                text-decoration: underline white;
-                text-underline-offset: 5px;
-            }
-        }
-
-        .footer04 {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            width: 16vw;
-            height: 400px;
-            padding: 3rem 3rem 3rem 24vw;
-
-            @include b.mq(tab) {
-                width: 100%;
-                background-color: #E4C22B;
-                align-items: center;
-            }
-    
-            @include b.mq(mob) {
-                width: 100%;
-                background-color: #E4C22B;
-                align-items: center;
-            }
-
-            .pageTop {
-                width: 140px;
-                height: auto;
-
-                & img {
-                    width: 100%;
-                    height: 100%;
-                }
-            }
-
-            .logos {
+                background-color: white;
                 display: flex;
+                flex-direction: column;
                 justify-content: center;
-                gap: 30px;
-                padding-top: 80px;
-                width: 200px;
-                height: auto;
+                text-align: left;
+                padding: 4vw;
 
-                & img {
-                    width: 100%;
-                    height: 100%;
+                width: 35%;
+                height: 400px;
+
+                @include b.mq(tab) {
+                    justify-content: left;
+                    width: 40%;
+                    height: 300px;
+                }
+
+                @include b.mq(mob) {
+                    width: 35%;
+                    padding: 10px;
+                }
+
+                .footer01_nth1 {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    width: 16vw;
+                    min-width: 150px;
+                    height: 10vh;
+                    font-size: 1.6rem;
+                    color: white;
+
+                    padding: 0.5rem;
+                    border-radius: 1rem;
+                    background-color: #E4C22B;
+
+                    @include b.mq(tab) {
+                        height: 5.5vh;
+                        font-size: 1rem;
+                        min-width: 120px;
+                    }
+
+                    @include b.mq(mob) {
+                        font-size: 1rem;
+                        min-width: 100px;
+                    }
+                }
+
+                & h2 {
+                    font-size: 1.5rem;
+                    padding-bottom: 1rem;
+
+                    @include b.mq(tab) {
+                        font-size: 1rem;
+                    }
+
+                    @include b.mq(mob) {
+                        font-size: 0.6rem;
+                    }
+                }
+
+                & h3 {
+                    font-size: 1.2rem;
+
+                    @include b.mq(tab) {
+                        font-size: 0.96rem;
+                    }
+
+                    @include b.mq(mob) {
+                        font-size: 0.6rem;
+                    }
+                }
+
+                & h4 {
+                    font-size: 1rem;
+
+                    @include b.mq(tab) {
+                        font-size: 0.8rem;
+                    }
+
+                    @include b.mq(mob) {
+                        font-size: 0.7rem;
+                    }
+                }
+
+                .footerH4title {
+                    font-size: 1.5rem;
+
+                    @include b.mq(tab) {
+                        font-size: 1.2rem;
+                    }
+
+                    @include b.mq(mob) {
+                        font-size: 1.0rem;
+                    }
+                }
+            }
+
+            .footer02 {
+                display: flex;
+                flex-direction: column;
+                align-items: baseline;
+                width: 16%;
+                min-width: 180px;
+                height: 400px;
+                color: white;
+                padding: 3rem 0 0 4%;
+                line-height: 2.9rem;
+                font-size: 1rem;
+
+                @include b.mq(tab) {
+                    width: 20%;
+                    font-size: 1rem;
+                    line-height: 1.8rem;
+                    height: 300px;
+                    padding: 3rem 0 0 2%;
+                    min-width: 100px;
+                }
+
+                @include b.mq(mob) {
+                    padding: 1rem 0 0 2%;
+                    display: none;
+                }
+
+                a:hover{
+                    transition: 0.5s;
+                    color: doru.$fontColor;
+                }
+            }
+
+            .footer03 {
+                display: flex;
+                flex-direction: column;
+                align-items: baseline;
+                width: 16%;
+                min-width: 180px;
+                height: 400px;
+                color: rgb(255, 255, 255);
+                padding: 3rem 0 0 4%;
+                line-height: 2rem;
+                font-size: 1rem;
+
+                @include b.mq(tab) {
+                    font-size: 15px;
+                    line-height: 1.6rem;
+                    width: 25%;
+                    min-width: 100px;
+                    padding: 3rem 0 0 2%;
+                    height: 300px;
+                }
+
+                @include b.mq(mob) {
+                    font-size: 1rem;
+                    padding: 1rem 0 0 5%;
+                    width: 40%;
+                    min-width: 70px;
+                }
+
+                & p {
+                    font-size: 1.2rem;
+
+                    @include b.mq(tab) {
+                        font-size: 1rem;
+                    }
+                }
+
+                & h4 {
+                    font-size: 1rem;
+                    text-decoration: underline;
+                    line-height: 2.5rem;
+                    text-underline-offset: 5px;
+
+                    @include b.mq(tab) {
+                        font-size: 13px;
+                        line-height: 2rem;
+                    }
+                }
+
+                a:hover{
+                    transition: 0.5s;
+                    color: doru.$fontColor;
+                }
+            }
+
+            .footer04 {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 33%;
+                height: 400px;
+                padding: 3rem 0rem 3rem 3%;
+
+                @include b.mq(tab) {
+                    width: 15%;
+                    padding: 3rem 3rem 3rem 2%;
+                    height: 300px;
+                }
+
+                @include b.mq(mob) {
+                    width: 25%;
+                    padding: 1rem 3rem 3rem 3rem;
+                }
+
+                .pageTop {
+                    width: 140px;
+                    height: auto;
+
+                    & img {
+                        width: 100%;
+
+                    }
+
+                    @include b.mq(tab) {
+                        width: 80px;
+                    }
+
+                    @include b.mq(mob) {
+                        width: 80px;
+                    }
+                }
+
+                .logos {
+                    display: flex;
+                    justify-content: center;
+                    gap: 30px;
+                    padding-top: 80px;
+                    width: 200px;
+                    height: auto;
+
+                    & img {
+                        width: 100%;
+                    }
+
+                    @include b.mq(tab) {
+                        width: 100px;
+                        gap: 20px;
+                    }
+
+                    @include b.mq(mob) {
+                        flex-direction: column;
+                        align-items: center;
+                        width: 30px;
+                        padding-top: 30px;
+
+                    }
+
+                    .logo01 {
+                        & img {
+                            width: 100%;
+                        }
+                    }
+
+                    .logo02 {
+                        @include b.mq(mob) {
+                            margin-top: 10px;
+                            width: 200%;
+                        }
+                    }
                 }
             }
         }
-    } //  footer00     //
-} //  footerWrap   //
+        //  footer00     //
+    }
+    //  footerWrap   //
+}

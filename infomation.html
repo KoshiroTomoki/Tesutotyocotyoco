@@ -15,20 +15,76 @@
 
 <body>
 
+    <!------------------------------------------ header -->
     <header>
+        <div class="headerWrap">
+
+            <nav class="headerNav01">
+                <ul>
+                    <li><img src="images/share/logologo.png" alt="ロゴ"></li>
+                    <li>
+                        <h1><a href="index.html">近畿柔道整復師会</a></h1>
+                    </li>
+                </ul>
+            </nav>
+
+            <nav class="headerNav02">
+                <ul>
+                    <li><img src="images/share/facebookfacebook.png" alt="フェイスブック"></li>
+                    <li>
+                        <p class="headerP">TEL 000-000-000</br>FAX 000-000-000</p>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="menuWrap">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Top</a></li>
+                    <li><a href="about.html">私たちについて</a></li>
+                    <li><a href="infomation.html">情報一般</a></li>
+                    <li><a href="vendor.html">指定業者様へ</a></li>
+                    <li><a href="QandA.html">Q&A</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <button class="toggleButton">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <!-- ドロワーメニュー -->
+        <nav id="drawerMenu">
+            <ul>
+                <li><a href="index.html">Top</a></li>
+                <li><a href="about.html">私たちについて</a></li>
+                <li><a href="infomation.html">情報一般</a></li>
+                <li><a href="vendor.html">指定業者様へ</a></li>
+                <li><a href="QandA.html">Q&A</a></li>
+                <li class="drowerLi">
+                    TEL 000-000-000 FAX000-000-000
+                </li>
+            </ul>
+        </nav>
     </header>
+
+    <!------------------------------------------ main -->
 
     <main>
         <!------------------------------------------- Information -->
-        <div id="information">
-
-            <div class="infoGeneral">
-                <h1>情報一般</h1>
+        <div class="infoWrap">
+            <div class="minusMargin">
+                <div class="infoGeneral">
+                    <h1>情報一般</h1>
+                </div>
             </div>
             <div class="infoComment">
                 <p>
                     柔道整復師協同組合では、各府県で年間を通して
-                    さまざまな学術活動をしています。
+                    さまざまな学術活動をしています。<br>
                     組合の方は勿論、提携企業様もご参加いただけます。
                 </p>
                 <p>
@@ -37,10 +93,7 @@
                 <p>
                     <img src="images/share/bird.png" alt="はと">
                 </p>
-
-                
             </div>
-
 
             <div id="infoKoeki">
                 <h1>公益活動</h1>
@@ -52,10 +105,10 @@
                 </div>
             </div>
 
-            <div class="infoKoekiCont">                
-                <div class="infoKoekiCont01">                    
+            <div class="infoKoekiCont">
+                <div class="infoKoekiCont01">
                     <div class="infoKoekiCont02">
-                        <a href="https://www.youtube.com/watch?v=TeHfLh8Nruo&t=37s"><img
+                        <a href="https://www.youtube.com/watch?v=TeHfLh8Nruo&t=37s" target="_blank"><img
                                 src="images/infomation/ShonenJyudo2023.png" alt="少年柔道"></a>
 
                         <br><br>
@@ -98,7 +151,7 @@
 
             <div id="infoAcade">
                 <h1>学術情報</h1>
-                <div class="deta_man">
+                <div class="detaMan">
                     <img src="images/infomation/deta_man_color 1.png" alt="データと人">
                 </div>
                 <div class="shorui">
@@ -112,7 +165,7 @@
                 </div>
                 <div class="infoAcadeCont02">
                     <div class="infoAcadeCont03">
-                        <a href="https://youtu.be/sHRWP3f1jX8"><img
+                        <a href="https://youtu.be/sHRWP3f1jX8" target="_blank"><img
                                 src="images/infomation/YouTubeKinkiGakujyutsuNara.png" alt="近畿学術大会"></a>
                     </div>
                     <div class="infoAcadeCont04">
@@ -130,7 +183,7 @@
                 </div>
                 <div class="infoAcadeCont02">
                     <div class="infoAcadeCont03">
-                        <a href="https://shadan-nissei.or.jp/admin/ronbunkensaku/system/sample.cgi"><img
+                        <a href="https://shadan-nissei.or.jp/admin/ronbunkensaku/system/sample.cgi" target="_blank"><img
                                 src="images/infomation/RonbunKensaku.png" alt="論文検索システム"></a>
                     </div>
                     <div class="infoAcadeCont04">
@@ -146,7 +199,7 @@
                 </div>
                 <div class="infoAcadeCont02">
                     <div class="infoAcadeCont03">
-                        <a href="https://sites.google.com/view/46narataikai/"><img
+                        <a href="https://sites.google.com/view/46narataikai/" target="_blank"><img
                                 src="images/infomation/KinkiGakujyutsuNara.png" alt="奈良大会"></a>
                     </div>
                     <div class="infoAcadeCont04">
@@ -162,18 +215,19 @@
                 </div>
                 <div class="infoKoekiCont01">
                     <div class="infoKoekiCont02">
-                        <a href="http://www.jsjt.jp/"><img src="images/infomation/SekkotsuIgakkai.png" alt="接骨医学会"></a>
+                        <a href="http://www.jsjt.jp/" target="_blank"><img src="images/infomation/SekkotsuIgakkai.png"
+                                alt="接骨医学会"></a>
                         <br><br>
-                        <a href="http://www.jsjt.jp/">
+                        <a href="http://www.jsjt.jp/" target="_blank">
                             <p>日本柔道整復接骨医学会</p>
                         </a>
                     </div>
                     <div class="infoKoekiCont03">
-                        <a href="https://jspess.org"><img src="images/infomation/NihonUndo.png"
+                        <a href="https://jspess.org" target="_blank"><img src="images/infomation/NihonUndo.png"
                                 alt="日本運動スポーツ"></a>
                         <br><br>
-                        <a href="https://jspess.org">
-                            <p>日本運動・スポーツ科学　学会</p>
+                        <a href="https://jspess.org" target="_blank">
+                            <p>日本運動・スポーツ科学 学会</p>
                         </a>
                     </div>
                 </div>
@@ -183,39 +237,96 @@
                 </div>
                 <div class="infoKoekiCont01">
                     <div class="infoKoekiCont02">
-                        <a href="https://karadascience.net/category/karada-science/"><img
+                        <a href="https://karadascience.net/category/karada-science/" target="_blank"><img
                                 src="images/infomation/KaradaScience.png" alt="からだサイエンス"></a>
                         <br><br>
-                        <a href="https://karadascience.net/category/karada-science/">
+                        <a href="https://karadascience.net/category/karada-science/" target="_blank">
                             <p>日本柔道整復接骨医学会</p>
                         </a>
 
                     </div>
                     <div class="infoKoekiCont03">
-                        <a href="https://www.jstage.jst.go.jp/browse/rika/-char/ja"><img
+                        <a href="https://www.jstage.jst.go.jp/browse/rika/-char/ja" target="_blank"><img
                                 src="images/infomation/Rigakuryouhou.png" alt="理学療法科学サイト"></a>
                         <br><br>
-                        <a href="https://www.jstage.jst.go.jp/browse/rika/-char/ja">
+                        <a href="https://www.jstage.jst.go.jp/browse/rika/-char/ja" target="_blank">
                             <p>日本運動・スポーツ科学　学会</p>
                         </a>
                     </div>
                 </div>
-
-
-
-
-
-
             </div>
-
-
         </div> <!-- Information end -->
     </main>
 
+    <!------------------------------------------ footer -->
+
     <footer>
+        <div id="footerWrap">
+            <div class="footer00">
+                <div class="footer01">
+                    <h4 class="footerH4title">INFO</h4>
+                    <h4>TEL 000-000-0000</h4>
+                    <h4>FAX 000-000-0000</h4><br>
+                    <h3><small>&copy;</small>公益社団法人</h3>
+                    <h2>近畿柔道整復師共同組合</h2>
+                    <a href="QandA.html#FormTop">
+                        <div class="footer01_nth1">お問合わせ</div>
+                    </a>
+                </div>
+                <div class="footer02">
+                    <a href="index.html">
+                        <p>HOME</p>
+                    </a>
+                    <a href="about.html">
+                        <p>私たちについて</p>
+                    </a>
+                    <a href="infomation.html">
+                        <p>公益活動</p>
+                    </a>
+                    <a href="vendor.html">
+                        <p>指定業者様へ</p>
+                    </a>
+                    <a href="QandA.html">
+                        <p>Q&A</p>
+                    </a>
+                </div>
+                <div class="footer03">
+                    <p>入会案内</p>
+                    <a href="https://hyogo-seifukushi.com/" target="_blank">
+                        <h4>兵庫県在住の方</h4>
+                    </a>
+                    <a href="https://www.nara-jusei.or.jp/kumiai.html" target="_blank">
+                        <h4>奈良県在住の方</h4>
+                    </a>
+                    <a href="https://shigajusei-kumiai.com/" target="_blank">
+                        <h4>滋賀県在住の方</h4>
+                    </a>
+                    <a href="http://www.miyako.or.jp/" target="_blank">
+                        <h4>京都府在住の方</h4>
+                    </a>
+                    <a href="https://wajusei-kumiai.net/" target="_blank">
+                        <h4>和歌山県在住の方</h4>
+                    </a>
+
+                </div>
+                <div class="footer04">
+                    <div class="pageTop">
+                        <a href="#"><img src="images/footer/pageTop.png" alt="トップページ"></a>
+                    </div>
+                    <div class="logos">
+                        <a href="" class="logo01"><img src="images/footer/facebook.png" alt="FaceBook"></a>
+                        <a href="" class="logo02"><img src="images/footer/logo_chocochoco.png" alt="ロゴ"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </footer>
 
     <script src="js/script.js"></script>
+    <script src="js/drower.js"></script>
+    <script src="js/swiper.js"></script>
+    <script src="js/merit.js"></script>
+    <script src="js/map.js"></script>
 </body>
 
 </html>

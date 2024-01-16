@@ -1,6 +1,3 @@
-/* JS_drawer v1.1.0 ,2023 */
-/* create by syo motoyama*/
-/* support by studio99.99(https://studio9999.com/) and CRAFT STUDIO SORA(https://cssora.net/) */
 @charset "UTF-8";
 
 @use "doru";
@@ -28,11 +25,16 @@
 
         .drowerLi {
             background-color: #FFFFFF;
+            border: 1px solid  #B5B5B5;
+            border-radius: 1rem;
+            margin-top: 2.5rem;
+            padding-top: 0.75rem;
+            padding-bottom: 0.75rem;
         }
 
         a {
             display: block;
-            padding: 1rem;
+            margin: 1rem;
             /* マウスが反応する範囲を少し広げている*/
             opacity: 1;
             transition: all .4s ease-in-out;
@@ -49,7 +51,7 @@
 
     @include b.mq(tab) {
         position: fixed;
-        top: 90px;
+        top: 5px;
         right: 10px;
         width: 50px;
         height: 70px;
@@ -85,21 +87,15 @@
         bottom: 20px;
         transform: rotate(0);
     }
-
 }
-
-
-
 
 /* アンカーリンクにマウスが乗ると、他のアンカーリンクが少し薄くなる指定 */
 #drawerMenu ul:has(a:hover) a:not(:hover) {
     opacity: 0.3;
 }
 
-
 @include b.mq(tab) {
     /* メディアクエリの値はお好みで */
-
 
     .close span:nth-of-type(1) {
         top: 33px;
@@ -132,18 +128,50 @@
         width: 200px;
         height: 450px;
         padding: 80px 20px 20px 20px;
-        background: rgb(242, 242, 242);
+        // background: rgb(242, 242, 242);
+        background-color: #FFFFFF;
+        border-top: 2px solid doru.$yellowColor;
+        border-left: 2px solid doru.$yellowColor;
+        border-bottom: 2px solid doru.$yellowColor;
         overflow: hidden;
         text-align: center;
         list-style-type: none;
-        border-radius: 0 0 0 10px;
-
+        border-radius: 10px 0 0 10px;
         position: relative;
-        top: 80px;
+        top: 78px;
     }
 
     #drawerMenu li {
         width: 100%;
     }
 
+    #drawerMenu a {
+        position: relative;
+        display: inline-block;
+        transition: .3s;
+    }
+
+    #drawerMenu a:hover {
+        color: doru.$fontColor;
+        transition: 0.5s;
+    }
+
+    a::after {
+        position: absolute;
+        bottom: .3em;
+        left: 0;
+        content: '';
+        width: 100%;
+        height: 2px;
+        background-color: #382710;
+        opacity: 0;
+        transition: .3s;
+    }
+
+    a:hover::after {
+        bottom: 0;
+        color: doru.$fontColor;
+        transition: 0.4s;
+        opacity: 1;
+    }
 }

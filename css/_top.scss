@@ -12,16 +12,81 @@ header {
 
 /////////////////////  topSectionTop
 #topSectionTop {
+    position: relative;
     height: auto;
-    background-image: url(../images/top/topimg01.png);
     background-position: center top;
     background-repeat: no-repeat;
     max-width: doru.$maxWidth;
-    width: 100%;
+    margin: 0 auto;
 
-    border-radius: 1rem;
-    margin: 3rem auto 0;
-    position: relative;
+    .main-top {
+        grid-row: main;
+        height: 85vh;
+        max-width: doru.$maxWidth;
+
+        @include b.mq(tab) {
+            height: 50vh; 
+        }
+        @include b.mq(mob) {
+            height: 40vh;
+        }
+    }
+
+    .swiper-container {
+        height: 100%;
+        width: 100%;
+        border-radius: 0 0 1rem 1rem;
+        overflow: hidden;
+    }
+
+    .swiper-wrapper,
+    .swiper-slide>div {
+        position: relative;
+        height: 100%;
+        width: 100%;
+    }
+
+    .swiper-slide.sw-1>div {
+        background: url(../images/top/topimg01.png) center center / cover no-repeat;
+    }
+
+    .swiper-slide.sw-2>div {
+        background: url(../images/top/hyogo.png) center center / cover no-repeat;
+    }
+
+    .swiper-slide.sw-3>div {
+        background: url(../images/top/nara.png) center center / cover no-repeat;
+    }
+
+    .swiper-slide.sw-4>div {
+        background: url(../images/top/siga.png) center center / cover no-repeat;
+    }
+
+    .swiper-slide.sw-5>div {
+        background: url(../images/top/wakayama.png) center center / cover no-repeat;
+    }
+
+    .swiper-slide.sw-6>div {
+        background: url(../images/top/kyoto.png) center center / cover no-repeat;
+    }
+
+    @keyframes zoomUp {
+
+        /* ズームアップで1.15倍させる指定 */
+        0% {
+            transform: scale(1);
+        }
+
+        100% {
+            transform: scale(1.1);
+        }
+    }
+
+    .swiper-slide-active>div,
+    .swiper-slide-duplicate-active>div,
+    .swiper-slide-prev>div {
+        animation: zoomUp 10s linear 0s 1 normal both;
+    }
 
     @include b.mq(tab) {
         background-size: cover;
@@ -38,14 +103,28 @@ header {
 
             .topText01 {
                 margin-bottom: 1rem;
+                position: absolute;
+                z-index: 10;
+                top: 10%;
+                left: 5%;
+                // background: radial-gradient(rgb(255, 255, 255),rgb(255, 255, 255,0));
+                // box-shadow: 0 0 30px white;
+                // border-radius: 1rem;
+                padding: 1rem;
+
+                @include b.mq(tab) {
+                    top: 5%;
+                }
 
                 p {
                     letter-spacing: 0.1rem;
                     line-height: 1.4;
                     font-size: 2rem;
+                    color: doru.$fontColor;
 
                     @include b.mq(tab) {
                         font-size: 1.5rem;
+                        line-height: 1.2;
                     }
 
                     @include b.mq(mob) {
@@ -53,14 +132,15 @@ header {
                     }
 
                     span {
-                        font-size: 2.5rem;
+                        font-size: 3rem;
+                        color: doru.$greenColor;
 
                         @include b.mq(tab) {
-                            font-size: 2rem;
+                            font-size: 2.5rem;
                         }
 
                         @include b.mq(mob) {
-                            font-size: 1.5rem;
+                            font-size: 2rem;
                         }
                     }
                 }
@@ -73,10 +153,19 @@ header {
                     margin: 2.5rem 0 1rem;
                 }
 
+                position: absolute;
+                z-index: 10;
+                top: 60%;
+                left: 6%;
+
+                @include b.mq(mob) {
+                    top: 50%;
+                    left: 6%;
+                }
+
                 h1 {
                     font-size: 2.5rem;
                     font-weight: bold;
-                    text-align: center;
                     white-space: nowrap;
 
                     @include b.mq(tab) {
@@ -84,7 +173,7 @@ header {
                     }
 
                     @include b.mq(mob) {
-                        font-size: 1rem;
+                        font-size: 1.2rem;
                     }
                 }
             }
@@ -92,11 +181,20 @@ header {
 
         .topTopBox02 {
             width: 50%;
-            max-width: 400px;
+            max-width: 550px;
             min-width: 180px;
             height: auto;
-
             margin-top: 2rem;
+            position: absolute;
+            z-index: 10;
+            top: 7%;
+            right: 3%;
+
+            @include b.mq(tab) {
+                max-width: 300px;
+                top: 0%;
+                right: 0%;
+            }
 
             img {
                 width: 100%;
@@ -110,6 +208,7 @@ header {
         justify-content: center;
         flex-direction: column;
         position: absolute;
+        z-index: 10;
         top: 93%;
         left: 50%;
         transform: translate(-50%, -50%);
@@ -149,12 +248,11 @@ header {
     }
 
     .faceBook {
-        width: 400px;
-        height: 150px;
-        border: 1px solid black;
+        max-width: 500px;
+        height: 200px;
 
-        @include b.mq(mob) {
-            width: 250px;
+        iframe {
+            width: 100%;
         }
     }
 
@@ -170,7 +268,7 @@ header {
             max-width: 80px;
         }
 
-        img{
+        img {
             width: 100%;
         }
 
@@ -188,7 +286,7 @@ header {
             max-width: 80px;
         }
 
-        img{
+        img {
             width: 100%;
         }
     }
@@ -202,7 +300,7 @@ header {
     height: 500px;
     border-radius: 50%;
     max-width: doru.$maxWidth;
-    margin: 5rem auto 0;
+    margin: 5rem auto;
 
     display: flex;
     justify-content: center;
@@ -251,7 +349,6 @@ header {
         }
 
         .linkYellow {
-            /* 以前のスタイル */
             margin-top: 3.5rem;
             background-color: white;
             border: solid 8px doru.$yellowColor;
@@ -278,276 +375,6 @@ header {
 
 
 /////////////////////  topSectionMerit
-
-.topSectionMeritPadding {
-    margin: 0 3rem;
-
-    @include b.mq(tab) {
-        margin: 0 1rem;
-    }
-
-    @include b.mq(mob) {
-        margin: 0;
-    }
-
-    #topSectionMerit {
-        background-color: white;
-        max-width: doru.$maxWidth;
-        margin: 7rem auto 0;
-
-        .meritButtonBox {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            .meritButton01 {
-                font-size: 2rem;
-                color: white;
-                background-color: doru.$yellowColor;
-                border-radius: 1rem;
-                display: inline-block;
-                padding: 1rem;
-                margin-right: 10rem;
-                transform: translateY(-3rem);
-
-                @include b.mq(tab) {
-                    font-size: 1.5rem;
-                    margin-right: 7rem;
-                }
-
-                @include b.mq(mob) {
-                    font-size: 1.2rem;
-                    margin-right: 3rem;
-                    padding: 0.5rem;
-                    transform: translateY(-1.5rem);
-                }
-            }
-
-            .meritButton02 {
-                font-size: 1rem;
-                color: white;
-                background-color: doru.$greenColor;
-                border-radius: 1rem;
-                display: inline-block;
-                padding: 1rem;
-                transform: translateY(-3rem);
-
-                @include b.mq(mob) {
-                    font-size: 0.8rem;
-                    padding: 0.5rem;
-                    transform: translateY(-1.5rem);
-                }
-            }
-        }
-
-        .meritMenberBox {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            margin: 0 auto;
-
-            .topMeritBox01 {
-                position: relative;
-                margin: 0 1rem;
-
-                .meritBox0101 {
-                    position: absolute;
-                    top: 0;
-                    left: -10rem;
-
-                    @include b.mq(tab) {
-                        position: unset;
-                        text-align: center;
-                        margin-bottom: 3rem;
-                    }
-                }
-
-                .meritBox0102 {
-                    margin-bottom: 5rem;
-                    text-align: center;
-
-                    @include b.mq(tab) {
-                        margin-bottom: 2rem;
-                    }
-
-                    h2 {
-                        font-size: 2rem;
-                        margin-bottom: 2rem;
-                        text-shadow: 2px 2px 4px rgba(129, 129, 129, 0.5);
-
-                        @include b.mq(tab) {
-                            font-size: 1.5rem;
-                        }
-
-                        @include b.mq(mob) {
-                            font-size: 1.2rem;
-                        }
-
-                        span {
-                            font-size: 3rem;
-                            margin-right: 1rem;
-                            color: doru.$greenColor;
-
-                            @include b.mq(tab) {
-                                font-size: 2.5rem;
-                            }
-
-                            @include b.mq(mob) {
-                                font-size: 2rem;
-                            }
-                        }
-                    }
-
-                    p {
-                        padding-bottom: 1rem;
-                    }
-                }
-            }
-
-            .topMeritBox02 {
-                position: relative;
-
-                .meritBox0201 {
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    margin: 0 auto;
-
-                    h2 {
-                        font-size: 2rem;
-                        margin-bottom: 3rem;
-                        text-shadow: 2px 2px 4px rgba(129, 129, 129, 0.5);
-
-                        @include b.mq(mob) {
-                            margin-bottom: 2rem;
-                        }
-
-                        span {
-                            font-size: 3rem;
-                            color: doru.$yellowColor;
-                            margin-right: 1rem;
-                        }
-                    }
-                }
-
-                .meritBox0202 {
-                    position: absolute;
-                    top: -3rem;
-                    right: -2rem;
-
-                    @include b.mq(tab) {
-                        position: unset;
-                        margin-left: 1.5rem;
-                    }
-                }
-
-                .meritBox0203 {
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-
-                    @include b.mq(tab) {
-                        flex-direction: column;
-                    }
-
-                    .meritBox020301 {
-                        position: relative;
-
-                        p {
-                            margin: 2rem;
-                        }
-
-                        .merit020301Text {
-                            text-align: center;
-                            width: 7rem;
-                            position: absolute;
-                            top: 40%;
-                            transform: translate(-50%, -50%);
-                            margin-left: 7.2rem;
-                            color: white;
-                        }
-                    }
-                }
-            }
-
-            .meritArrow {
-                font-size: 7rem;
-                color: doru.$yellowColor;
-            }
-
-            .topMeritBox03 {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                flex-direction: column;
-                margin-top: 2rem;
-
-                .topMeritBox03Text {
-                    text-align: center;
-
-                    h2 {
-                        font-size: 2rem;
-                        font-weight: bold;
-                        text-shadow: 2px 2px 4px rgba(129, 129, 129, 0.5);
-                    }
-
-                    p {
-                        margin: 2rem;
-                    }
-                }
-
-                .meritContactBox {
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    flex-wrap: wrap;
-
-                    .meritContact {
-                        margin: 3rem;
-
-                        @include b.mq(tab) {
-                            margin: 1rem;
-                        }
-
-                        p {
-                            text-align: center;
-                            font-weight: Bold;
-                        }
-                    }
-                }
-            }
-
-            .linkYellow {
-                margin: 3.5rem 0;
-                background-color: white;
-                border: solid 8px doru.$yellowColor;
-                border-radius: 10rem;
-                font-size: 1.5rem;
-                width: 19rem;
-                text-align: center;
-                padding: 0.5rem;
-                box-shadow: 0.2rem 0.2rem 0.2rem rgb(168, 168, 168);
-                transition: 0.5s;
-
-                @include b.mq(tab) {
-                    margin-top: 2rem;
-                    width: 13rem;
-                    font-size: 1rem;
-                    border: solid 5px doru.$yellowColor;
-                }
-            }
-        }
-
-        .linkYellow:hover {
-            box-shadow: none;
-        }
-
-        .displayNone {
-            display: none;
-        }
-    }
-}
 
 /////////////////////  topSectionActivity
 
@@ -804,7 +631,7 @@ svg {
         transform: translate(3.5rem, 7rem);
 
         @include b.mq(tab) {
-        transform: translate(3.7rem, 5rem);
+            transform: translate(3.7rem, 5rem);
         }
 
         @include b.mq(mob) {
@@ -879,21 +706,14 @@ svg {
                 fill: #77B8D2;
             }
 
-            .active {
-                transform: scale(1.1);
-                transform-origin: center center;
-                transform: translateX(-1.5rem);
-
-
-                @include b.mq(tab) {
-                    transform: translateX(-3rem);
-                }
+            .mapActive {
+                transition: 0.3s;
             }
 
-            .noactive {
+            .mapNoActive {
                 fill: gray;
-                transform: scale(0.8);
                 transform-origin: center center;
+                transition: 0.3s;
 
                 .hyogoMap,
                 .kyotoMap,
@@ -904,7 +724,7 @@ svg {
                 .kyotoText,
                 .shigaText,
                 .naraText,
-                .wakayamaText{
+                .wakayamaText {
                     fill: #B5B5B5;
                 }
 
@@ -912,7 +732,7 @@ svg {
                 .kyotoName,
                 .shigaName,
                 .naraName,
-                .wakayamaName{
+                .wakayamaName {
                     stroke: #B5B5B5;
                 }
             }

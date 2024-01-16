@@ -1,36 +1,47 @@
 @use "doru";
 @use "breakpoint" as b;
 
-#information {
+#infoWrap {
     width: 100%;
     height: 500vh;
     background-color: #FCFAF2;
+    margin: 0 -0.5;
+
+    @include b.mq(tab) {
+        height: 1000vh;
+    }
+
+    @include b.mq(mob) {
+        height: 700vh;
+    }
 }
 
-.infoGeneral {
-    width: 100%;
-    height: 30vh;
-    background-image: url("../images/infomation/topImageInfo.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.minusMargin {
+    margin: 0 -0.5rem;
 
-    & h1 {
-        font-size: 3rem;
-        font-weight: bold;
+    .infoGeneral {
+        width: 100%;
+        height: 20vh;
+        background-image: url("../images/infomation/topImageInfo.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
-        @include b.mq(tab) {
+        & h1 {
             font-size: 2.5rem;
+            font-weight: bold;
+
+            @include b.mq(tab) {
+                font-size: 2rem;
+            }
+
+            @include b.mq(mob) {
+                font-size: 1.5rem;
+            }
         }
-
-        @include b.mq(mob) {
-            font-size: 2rem;
-        }
-
-
     }
 }
 
@@ -38,51 +49,60 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 20vh;
+    margin-top: 5rem;
     position: relative;
 
-    & p {
+    & p:nth-child(1) {
         line-height: 1.7;
         padding: 5rem;
-        width: 50%;
+        width: 70%;
+        text-align: center;
 
         @include b.mq(tab) {
-            width: 240vw;
+            width: 70%;
+            padding: 2rem;
         }
 
         @include b.mq(mob) {
-            left: -20vw;
+            width: 80%;
         }
     }
 
     & p:nth-child(2) {
         position: absolute;
-        top: 5vh;
-        left: 20vw;
+        top: 60%;
+        left: 10%;
         width: 10%;
 
-        @include b.mq(tab) {
-            left: -10vw;
-        }
+        @include b.mq(tab) {}
 
         @include b.mq(mob) {
-            left: -15vw;
-            top: 50vw;
+            top: 80%;
+            left: -2%;
+
+            img {
+                width: 80px;
+                height: auto;
+            }
         }
     }
 
     & p:nth-child(3) {
         position: absolute;
-        top: -8vh;
-        left: 65vw;
+        top: -10%;
+        left: 75%;
         width: 10%;
 
-        @include b.mq(tab) {
-            left: 67vw;
-        }
+        @include b.mq(tab) {}
 
         @include b.mq(mob) {
-            left: 44vw;
+            top: -10%;
+            left: 78%;
+
+            img {
+                width: 80px;
+                height: auto;
+            }
         }
     }
 }
@@ -91,6 +111,12 @@
     width: 100%;
     margin: 9vh auto;
     position: relative;
+
+    @include b.mq(tab) {
+        margin: 9vh auto 4vh;
+    }
+
+    @include b.mq(mob) {}
 
     & h1 {
         text-align: center;
@@ -110,7 +136,7 @@
         width: 16vw;
         height: auto;
         position: absolute;
-        top: 8vh;
+        top: 9vh;
         left: 5vw;
 
         & img {
@@ -123,17 +149,11 @@
         width: 12vw;
         height: auto;
         position: absolute;
-        top: 140vh;
+        top: 5vh;
         left: 80vw;
 
         @include b.mq(tab) {
-            top: 240vh;
-        }
-
-        @include b.mq(mob) {
-            top: 220vh;
-            width: 20vw;
-            left: 74vw;
+            top: 6vh;
         }
 
         & img {
@@ -146,40 +166,37 @@
 .infoKoekiCont {
     margin: 0 auto;
     width: 80vw;
-    height: 140vh;
     background-color: white;
-    @include b.mq(tab) {
-        height: 220vh;
-    }
-
-    @include b.mq(mob) {
-        height: 200vh;
-    }
+    border-radius: 1rem;
 
     .infoKoekiCont01 {
         display: flex;
         justify-content: center;
-        gap: 3vw;
+        gap: 1vw;
+        padding: 1rem;
+        background-color: white;
+        border-radius: 1rem;
 
         @include b.mq(tab) {
             display: block;
-            
         }
 
-        @include b.mq(mob) {
-            display: block;
-        }
+        @include b.mq(mob) {}
     }
 
     .infoKoekiCont02 {
-        margin: 14vh auto 0;
+        margin: 4vh auto;
         width: 40%;
+        padding: 1rem;
 
         @include b.mq(tab) {
+            margin: 8vh auto 0;
             width: 80%;
+            padding: 0;
         }
 
         @include b.mq(mob) {
+            margin: 2vh auto 0;
             width: 80%;
         }
 
@@ -190,11 +207,14 @@
     }
 
     .infoKoekiCont03 {
-        margin: 14vh auto 0;
+        margin: 4vh auto 0;
         width: 40%;
+        padding: 1rem;
 
         @include b.mq(tab) {
+            margin: 8vh auto 0;
             width: 80%;
+            padding: 0;
         }
 
         @include b.mq(mob) {
@@ -210,7 +230,7 @@
 
 #infoAcade {
     width: 100%;
-    margin: 20vh auto 10vh;
+    margin: 30vh auto 10vh;
     position: relative;
 
     & h1 {
@@ -227,7 +247,7 @@
         }
     }
 
-    .deta_man {
+    .detaMan {
         width: 16vw;
         height: auto;
         position: absolute;
@@ -244,13 +264,12 @@
         width: 12vw;
         height: auto;
         position: absolute;
-        top: 410vh;
+        top: 10vh;
         left: 80vw;
 
+        @include b.mq(tab) {}
 
-        @include b.mq(mob) {
-            top: 340vh;
-        }
+        @include b.mq(mob) {}
 
         & img {
             width: 100%;
@@ -260,19 +279,16 @@
 }
 
 .infoAcadeCont {
-    margin: 0 auto;
+    margin: 0 auto 5rem;
+    padding-bottom: 2rem;
     width: 80vw;
-    height: 400vh;
     background-color: white;
+    border-radius: 1rem;
 
-    @include b.mq(tab) {
-        height: 400vh;
-    }
+    @include b.mq(tab) {}
 
-    @include b.mq(mob) {
-        height: 330vh;
-    }
-    
+    @include b.mq(mob) {}
+
     .infoAcadeCont01 {
         display: flex;
         justify-content: center;
@@ -336,7 +352,7 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: start;
+        align-items: baseline;
         width: 40%;
 
         @include b.mq(tab) {
@@ -411,6 +427,4 @@
             height: 60%;
         }
     }
-
-
 }
