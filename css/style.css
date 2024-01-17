@@ -936,7 +936,7 @@ header .menuWrap nav a:hover::after {
 @media screen and (max-width: 768px) {
   #topSectionFb .bird01 {
     left: 0%;
-    top: -30%;
+    top: -35%;
     max-width: 80px;
   }
 }
