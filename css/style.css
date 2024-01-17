@@ -886,6 +886,11 @@ header .menuWrap nav a:hover::after {
     font-size: 1rem;
   }
 }
+@media screen and (max-width: 500px) {
+  #topSectionTop .topScroll p {
+    font-size: 1rem;
+  }
+}
 
 #scrollPoint {
   margin: 0 0 5rem;
@@ -935,8 +940,8 @@ header .menuWrap nav a:hover::after {
 }
 @media screen and (max-width: 768px) {
   #topSectionFb .bird01 {
+    top: -45%;
     left: 0%;
-    top: -35%;
     max-width: 80px;
   }
 }
@@ -1125,7 +1130,7 @@ header .menuWrap nav a:hover::after {
   #topSectionActivity .activity0101 {
     width: 100%;
     padding: 1rem 1rem;
-    border-radius: 0rem;
+    border-radius: 1rem;
   }
 }
 #topSectionActivity .activity0101 img {
@@ -1143,7 +1148,7 @@ header .menuWrap nav a:hover::after {
   #topSectionActivity .activity0201 {
     width: 100%;
     padding: 1rem 1rem;
-    border-radius: 0rem;
+    border-radius: 1rem;
   }
 }
 #topSectionActivity .activity0201 img {
@@ -2207,8 +2212,9 @@ button {
   align-items: center;
   margin-bottom: 5rem;
   margin-top: 5rem;
-  padding-left: 5rem;
-  padding-right: 5rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  position: relative;
 }
 @media screen and (max-width: 768px) {
   #sectionVendor {
@@ -2224,21 +2230,26 @@ button {
     padding-right: 2rem;
   }
 }
-#sectionVendor .vendorImg03 img {
-  position: relative;
-  right: 15%;
-  top: 15%;
+#sectionVendor .vendorImg03 {
+  max-width: 100px;
+  position: absolute;
+  left: 0%;
+  top: 0%;
 }
 @media screen and (max-width: 768px) {
-  #sectionVendor .vendorImg03 img {
-    width: 40%;
-    right: 20%;
+  #sectionVendor .vendorImg03 {
+    max-width: 80px;
+    left: -5%;
   }
+}
+#sectionVendor .vendorImg03 img {
+  width: 100%;
 }
 #sectionVendor h2 {
   font-size: 2rem;
   font-weight: bold;
   text-align: center;
+  padding-top: 2rem;
 }
 @media screen and (max-width: 500px) {
   #sectionVendor h2 {
@@ -2262,26 +2273,50 @@ button {
   margin-top: 5rem;
   text-align: center;
 }
+#sectionVendor .venderBottomP2 {
+  margin-top: 10rem;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  position: relative;
+}
+@media screen and (max-width: 768px) {
+  #sectionVendor .venderBottomP2 {
+    font-size: 1rem;
+    margin-top: 7rem;
+  }
+}
 #sectionVendor .vendorImg04 {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 1rem;
 }
+#sectionVendor .vendorImg05 {
+  margin: 2rem auto 0;
+  max-width: 150px;
+}
 #sectionVendor .vendorImg05 img {
-  position: relative;
-  left: 90%;
+  width: 100%;
+}
+
+.vendorContactBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.vendorContactBox .vendorContact {
+  margin: 3rem 5rem 5rem;
 }
 @media screen and (max-width: 768px) {
-  #sectionVendor .vendorImg05 img {
-    width: 40%;
-    left: 80%;
+  .vendorContactBox .vendorContact {
+    margin: 1rem;
   }
 }
-@media screen and (max-width: 500px) {
-  #sectionVendor .vendorImg05 img {
-    left: 75%;
-  }
+.vendorContactBox .vendorContact p {
+  text-align: center;
+  font-weight: Bold;
 }
 
 #infoWrap {

@@ -125,8 +125,9 @@
     margin-bottom: 5rem;
     margin-top: 5rem;
     // padding: 5rem;
-    padding-left: 5rem;
-    padding-right: 5rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    position: relative;
 
     @include b.mq(tab) {
         width: 75%;
@@ -141,16 +142,20 @@
     }
 
     .vendorImg03 {
+        max-width: 100px;
+        position: absolute;
+        left: 0%;
+        top: 0%;
+
+        @include b.mq(tab) {}
+
+        @include b.mq(tab) {
+            max-width: 80px;
+            left: -5%;
+        }
 
         img {
-            position: relative;
-            right: 15%;
-            top: 15%;
-
-            @include b.mq(tab) {
-                width: 40%;
-                right: 20%;
-            }
+            width: 100%;
         }
     }
 
@@ -158,6 +163,7 @@
         font-size: 2rem;
         font-weight: bold;
         text-align: center;
+        padding-top: 2rem;
 
         @include b.mq(mob) {
             font-size: 1.5rem;
@@ -183,6 +189,19 @@
         text-align: center;
     }
 
+    .venderBottomP2 {
+        margin-top: 10rem;
+        text-align: center;
+        font-size: 1.5rem;
+        font-weight: bold;
+        position: relative;
+
+        @include b.mq(tab) {
+            font-size: 1rem;
+            margin-top: 7rem;
+        }
+    }
+
     .vendorImg04 {
         display: flex;
         flex-direction: column;
@@ -191,20 +210,31 @@
     }
 
     .vendorImg05 {
+        margin: 2rem auto 0;
+        max-width: 150px;
 
         img {
-            position: relative;
-            left: 90%;
+            width: 100%;
+        }
+    }
+}
 
-            @include b.mq(tab) {
-                width: 40%;
-                left: 80%;
-            }
+.vendorContactBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 
-            @include b.mq(mob) {
-                left: 75%;
-            }
+    .vendorContact {
+        margin: 3rem 5rem 5rem;
+
+        @include b.mq(tab) {
+            margin: 1rem;
         }
 
+        p {
+            text-align: center;
+            font-weight: Bold;
+        }
     }
 }
