@@ -252,6 +252,9 @@
     @include b.mq(tab) {
         margin: 5rem auto 0;
     }
+    @include b.mq(mob) {
+        margin: 0rem auto 0;
+    }
 
     .faceBook {
         width: 500px;
@@ -279,6 +282,7 @@
 
         @include b.mq(tab) {
             left: 0%;
+            top: -30%;
             max-width: 80px;
         }
 

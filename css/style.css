@@ -901,7 +901,12 @@ header .menuWrap nav a:hover::after {
 }
 @media screen and (max-width: 768px) {
   #topSectionFb {
-    margin: 8rem auto 0;
+    margin: 5rem auto 0;
+  }
+}
+@media screen and (max-width: 500px) {
+  #topSectionFb {
+    margin: 0rem auto 0;
   }
 }
 #topSectionFb .faceBook {
@@ -931,6 +936,7 @@ header .menuWrap nav a:hover::after {
 @media screen and (max-width: 768px) {
   #topSectionFb .bird01 {
     left: 0%;
+    top: -30%;
     max-width: 80px;
   }
 }
