@@ -145,17 +145,13 @@
 
             .topText02 {
                 margin: 2rem 0 3rem;
-
-                @include b.mq(mob) {
-                    margin: 2.5rem 0 1rem;
-                }
-
                 position: absolute;
                 z-index: 10;
                 top: 60%;
                 left: 6%;
 
                 @include b.mq(mob) {
+                    margin: 2.5rem 0 1rem;
                     top: 50%;
                     left: 6%;
                 }
@@ -327,7 +323,6 @@
     align-items: center;
 
     position: relative;
-    z-index: -10;
 
     @include b.mq(tab) {
         border-radius: 50%;
@@ -409,7 +404,6 @@
 
         @include b.mq(mob) {
             max-width: 80px;
-
         }
 
         img{

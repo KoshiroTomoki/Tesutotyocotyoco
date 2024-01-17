@@ -801,10 +801,6 @@ header .menuWrap nav a:hover::after {
 @media screen and (max-width: 500px) {
   #topSectionTop .topTopBox .topTopBox01 .topText02 {
     margin: 2.5rem 0 1rem;
-  }
-}
-@media screen and (max-width: 500px) {
-  #topSectionTop .topTopBox .topTopBox01 .topText02 {
     top: 50%;
     left: 6%;
   }
@@ -975,7 +971,6 @@ header .menuWrap nav a:hover::after {
   justify-content: center;
   align-items: center;
   position: relative;
-  z-index: -10;
 }
 @media screen and (max-width: 768px) {
   #topSectionAbout {
