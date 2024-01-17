@@ -104,7 +104,7 @@
 
     @include b.mq(mob) {
         max-width: 80px;
-        right: 0%;
+        right: -10%;
         top: -15%;
     }
 
@@ -199,6 +199,10 @@
             @include b.mq(tab) {
                 width: 40%;
                 left: 80%;
+            }
+
+            @include b.mq(mob) {
+                left: 75%;
             }
         }
 

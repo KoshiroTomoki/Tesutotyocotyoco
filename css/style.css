@@ -888,7 +888,7 @@ header .menuWrap nav a:hover::after {
 }
 
 #scrollPoint {
-  margin: 5rem 0;
+  margin: 0 0 5rem;
 }
 
 #topSectionFb {
@@ -964,6 +964,7 @@ header .menuWrap nav a:hover::after {
   justify-content: center;
   align-items: center;
   position: relative;
+  z-index: -10;
 }
 @media screen and (max-width: 768px) {
   #topSectionAbout {
@@ -1060,13 +1061,15 @@ header .menuWrap nav a:hover::after {
 }
 @media screen and (max-width: 768px) {
   #topSectionAbout .topAboutImg {
-    top: 50%;
+    top: 55%;
     right: -10%;
   }
 }
 @media screen and (max-width: 500px) {
   #topSectionAbout .topAboutImg {
     max-width: 100px;
+    right: -2%;
+    z-index: -5;
   }
 }
 #topSectionAbout .topAboutImg img {
@@ -1516,7 +1519,7 @@ svg .svgMap .svgMap2 .mapNoActive .wakayamaName {
 }
 @media screen and (max-width: 500px) {
   #aboutMain .aboutimg02 {
-    left: 85%;
+    left: 81%;
     top: -15%;
   }
 }
@@ -2181,7 +2184,7 @@ button {
 @media screen and (max-width: 500px) {
   .vendorImg02 {
     max-width: 80px;
-    right: 0%;
+    right: -10%;
     top: -15%;
   }
 }
@@ -2269,6 +2272,11 @@ button {
     left: 80%;
   }
 }
+@media screen and (max-width: 500px) {
+  #sectionVendor .vendorImg05 img {
+    left: 75%;
+  }
+}
 
 #infoWrap {
   width: 100%;
@@ -2318,26 +2326,28 @@ button {
 }
 .infoComment p:nth-child(1) {
   line-height: 1.7;
-  padding: 5rem;
-  width: 70%;
+  padding: 3rem;
+  width: 50%;
   text-align: center;
+  background-color: white;
+  border-radius: 1rem;
 }
 @media screen and (max-width: 768px) {
   .infoComment p:nth-child(1) {
-    width: 70%;
-    padding: 2rem;
-  }
-}
-@media screen and (max-width: 500px) {
-  .infoComment p:nth-child(1) {
     width: 80%;
+    padding: 2rem;
   }
 }
 .infoComment p:nth-child(2) {
   position: absolute;
   top: 60%;
-  left: 10%;
+  left: 15%;
   width: 10%;
+}
+@media screen and (max-width: 768px) {
+  .infoComment p:nth-child(2) {
+    left: 5%;
+  }
 }
 @media screen and (max-width: 500px) {
   .infoComment p:nth-child(2) {
@@ -2352,12 +2362,18 @@ button {
 .infoComment p:nth-child(3) {
   position: absolute;
   top: -10%;
-  left: 75%;
+  right: 15%;
   width: 10%;
+}
+@media screen and (max-width: 768px) {
+  .infoComment p:nth-child(3) {
+    right: 5%;
+  }
 }
 @media screen and (max-width: 500px) {
   .infoComment p:nth-child(3) {
     top: -10%;
+    right: 15%;
   }
   .infoComment p:nth-child(3) img {
     width: 80px;
@@ -2391,7 +2407,7 @@ button {
   }
 }
 #infoKoeki .calender {
-  width: 16vw;
+  max-width: 100px;
   min-width: 100px;
   height: auto;
   position: absolute;
@@ -2403,14 +2419,21 @@ button {
   height: 100%;
 }
 #infoKoeki .friends {
-  max-width: 150px;
+  max-width: 130px;
+  min-width: 100px;
   position: absolute;
-  top: 50%;
-  left: 80%;
+  top: 60%;
+  left: 90%;
 }
 @media screen and (max-width: 768px) {
   #infoKoeki .friends {
-    left: 75%;
+    left: 80%;
+  }
+}
+@media screen and (max-width: 500px) {
+  #infoKoeki .friends {
+    left: 70%;
+    max-width: 100px;
   }
 }
 #infoKoeki .friends img {
@@ -2501,7 +2524,7 @@ button {
   }
 }
 #infoAcade .detaMan {
-  width: 16vw;
+  max-width: 150px;
   min-width: 100px;
   height: auto;
   position: absolute;
@@ -2511,6 +2534,7 @@ button {
 @media screen and (max-width: 768px) {
   #infoAcade .detaMan {
     top: 100%;
+    max-width: 100px;
   }
 }
 #infoAcade .detaMan img {
@@ -2518,16 +2542,17 @@ button {
   height: 100%;
 }
 #infoAcade .shorui {
-  width: 12vw;
+  max-width: 150px;
   min-width: 100px;
   height: auto;
   position: absolute;
-  top: 10vh;
-  left: 80%;
+  top: 100%;
+  left: 85%;
 }
 @media screen and (max-width: 768px) {
   #infoAcade .shorui {
     left: 75%;
+    max-width: 100px;
   }
 }
 @media screen and (max-width: 500px) {
@@ -2765,20 +2790,29 @@ button {
     width: 100%;
   }
 }
-.qa_li dt {
+.qa_li .qa_liBox {
+  width: 80%;
+  margin: 0 auto;
+}
+@media screen and (max-width: 768px) {
+  .qa_li .qa_liBox {
+    width: 100%;
+  }
+}
+.qa_li .qa_liBox dt {
   padding: 1rem;
 }
-.qa_li dt::before {
+.qa_li .qa_liBox dt::before {
   content: "Q";
   font-weight: bold;
   font-size: x-large;
   color: #2E6256;
   padding: 0.5rem;
 }
-.qa_li dd {
+.qa_li .qa_liBox dd {
   padding: 1rem;
 }
-.qa_li dd::before {
+.qa_li .qa_liBox dd::before {
   content: "A";
   font-weight: bold;
   font-size: x-large;

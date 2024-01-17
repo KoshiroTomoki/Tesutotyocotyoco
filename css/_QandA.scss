@@ -18,7 +18,7 @@
 
     @include b.mq(tab) {
         font-size: 2rem;
-            margin: 5rem auto 0;
+        margin: 5rem auto 0;
     }
 
     @include b.mq(mob) {
@@ -41,7 +41,7 @@
         max-width: 80px;
     }
 
-    img{
+    img {
         width: 100%;
     }
 }
@@ -56,7 +56,7 @@
         max-width: 80px;
     }
 
-    img{
+    img {
         width: 100%;
     }
 }
@@ -72,28 +72,37 @@
         width: 100%;
     }
 
-    dt {
-        padding: 1rem;
-    }
+    .qa_liBox {
+        width: 80%;
+        margin: 0 auto;
 
-    dt::before {
-        content: "Q";
-        font-weight: bold;
-        font-size: x-large;
-        color: doru.$greenColor;
-        padding: 0.5rem;
-    }
+        @include b.mq(tab) {
+            width: 100%;
+        }
 
-    dd {
-        padding: 1rem;
-    }
+        dt {
+            padding: 1rem;
+        }
 
-    dd::before {
-        content: "A";
-        font-weight: bold;
-        font-size: x-large;
-        color: doru.$yellowColor;
-        padding: 0.5rem;
+        dt::before {
+            content: "Q";
+            font-weight: bold;
+            font-size: x-large;
+            color: doru.$greenColor;
+            padding: 0.5rem;
+        }
+
+        dd {
+            padding: 1rem;
+        }
+
+        dd::before {
+            content: "A";
+            font-weight: bold;
+            font-size: x-large;
+            color: doru.$yellowColor;
+            padding: 0.5rem;
+        }
     }
 }
 
@@ -218,7 +227,7 @@
         }
     }
 
-    .contactSubmit:hover{
+    .contactSubmit:hover {
         box-shadow: none;
     }
 

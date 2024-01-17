@@ -48,27 +48,29 @@
 
     & p:nth-child(1) {
         line-height: 1.7;
-        padding: 5rem;
-        width: 70%;
+        padding: 3rem;
+        width: 50%;
         text-align: center;
+        background-color: white;
+        border-radius: 1rem;
 
         @include b.mq(tab) {
-            width: 70%;
+            width: 80%;
             padding: 2rem;
         }
 
-        @include b.mq(mob) {
-            width: 80%;
-        }
+        @include b.mq(mob) {}
     }
 
     & p:nth-child(2) {
         position: absolute;
         top: 60%;
-        left: 10%;
+        left: 15%;
         width: 10%;
 
-        @include b.mq(tab) {}
+        @include b.mq(tab) {
+            left: 5%;
+        }
 
         @include b.mq(mob) {
             top: 80%;
@@ -84,13 +86,16 @@
     & p:nth-child(3) {
         position: absolute;
         top: -10%;
-        left: 75%;
+        right: 15%;
         width: 10%;
 
-        @include b.mq(tab) {}
+        @include b.mq(tab) {
+            right: 5%;
+        }
 
         @include b.mq(mob) {
             top: -10%;
+            right: 15%;
 
             img {
                 width: 80px;
@@ -126,7 +131,7 @@
     }
 
     .calender {
-        width: 16vw;
+        max-width: 100px;
         min-width: 100px;
         height: auto;
         position: absolute;
@@ -140,13 +145,19 @@
     }
 
     .friends {
-        max-width: 150px;
+        max-width: 130px;
+        min-width: 100px;
         position: absolute;
-        top: 50%;
-        left: 80%;
+        top: 60%;
+        left: 90%;
 
         @include b.mq(tab) {
-            left: 75%;
+            left: 80%;
+        }
+
+        @include b.mq(mob) {
+            left: 70%;
+            max-width: 100px;
         }
 
         & img {
@@ -240,7 +251,7 @@
     }
 
     .detaMan {
-        width: 16vw;
+        max-width: 150px;
         min-width: 100px;
         height: auto;
         position: absolute;
@@ -249,6 +260,7 @@
 
         @include b.mq(tab) {
             top: 100%;
+            max-width: 100px;
         }
 
         & img {
@@ -258,15 +270,16 @@
     }
 
     .shorui {
-        width: 12vw;
+        max-width: 150px;
         min-width: 100px;
         height: auto;
         position: absolute;
-        top: 10vh;
-        left: 80%;
+        top: 100%;
+        left: 85%;
 
         @include b.mq(tab) {
             left: 75%;
+            max-width: 100px;
         }
 
         @include b.mq(mob) {
@@ -312,8 +325,8 @@
             }
         }
 
-        .infoAcadeh2{
-width: 500px;
+        .infoAcadeh2 {
+            width: 500px;
         }
     }
 
