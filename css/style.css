@@ -1067,7 +1067,7 @@ header .menuWrap nav a:hover::after {
 }
 @media screen and (max-width: 768px) {
   #topSectionAbout .topAboutImg {
-    top: 55%;
+    top: 60%;
     right: -10%;
   }
 }
@@ -1075,7 +1075,6 @@ header .menuWrap nav a:hover::after {
   #topSectionAbout .topAboutImg {
     max-width: 100px;
     right: -2%;
-    z-index: -5;
   }
 }
 #topSectionAbout .topAboutImg img {

@@ -417,14 +417,13 @@
         right: 10%;
 
         @include b.mq(tab) {
-            top: 55%;
+            top: 60%;
             right: -10%;
         }
 
         @include b.mq(mob) {
             max-width: 100px;
             right: -2%;
-            z-index: -5;
         }
 
         img{
