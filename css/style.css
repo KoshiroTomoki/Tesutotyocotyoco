@@ -411,7 +411,7 @@ header .headerWrap .headerNav01 ul {
 }
 @media screen and (max-width: 768px) {
   header .headerWrap .headerNav01 ul {
-    gap: 0.5rem;
+    gap: 0.3rem;
   }
 }
 header .headerWrap .headerNav01 ul img {
@@ -421,6 +421,12 @@ header .headerWrap .headerNav01 ul img {
 @media screen and (max-width: 768px) {
   header .headerWrap .headerNav01 ul img {
     width: 45px;
+  }
+}
+@media screen and (max-width: 500px) {
+  header .headerWrap .headerNav01 ul img {
+    width: 35px;
+    margin-left: 0.3rem;
   }
 }
 header .headerWrap .headerNav01 ul h1 {
@@ -434,7 +440,7 @@ header .headerWrap .headerNav01 ul h1 {
 }
 @media screen and (max-width: 500px) {
   header .headerWrap .headerNav01 ul h1 {
-    font-size: 1.25rem;
+    font-size: 1.1rem;
   }
 }
 header .headerWrap .headerNav02 {
@@ -442,12 +448,12 @@ header .headerWrap .headerNav02 {
 }
 header .headerWrap .headerNav02 ul {
   display: flex;
-  gap: 2rem;
+  gap: 1.5rem;
   align-items: center;
 }
 @media screen and (max-width: 500px) {
   header .headerWrap .headerNav02 ul img {
-    width: 20px;
+    max-width: 20px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -870,6 +876,11 @@ header .menuWrap nav a:hover::after {
     color: #B5B5B5;
   }
 }
+@media screen and (max-width: 500px) {
+  #topSectionTop .topScroll {
+    top: 90%;
+  }
+}
 #topSectionTop .topScroll a:hover {
   color: white;
   transition: 0.5s;
@@ -936,7 +947,7 @@ header .menuWrap nav a:hover::after {
 }
 @media screen and (max-width: 768px) {
   #topSectionFb .bird01 {
-    top: -45%;
+    top: -40%;
     left: 0%;
     max-width: 80px;
   }

@@ -207,13 +207,16 @@
         transform: translate(-50%, -50%);
 
         animation: fontcolor 10s infinite;
-
         @keyframes fontcolor {
             0% { color: #B5B5B5; }
             25% { color: doru.$fontColor; }
             50% { color: #B5B5B5; }
             75% { color: doru.$fontColor; }
             100% { color: #B5B5B5; }
+        }
+
+        @include b.mq(mob) {
+            top: 90%;
         }
 
         a:hover {
@@ -280,7 +283,7 @@
         height: auto;
 
         @include b.mq(tab) {
-            top: -45%;
+            top: -40%;
             left: 0%;
             max-width: 80px;
         }
